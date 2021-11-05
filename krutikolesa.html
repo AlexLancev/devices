@@ -5,11 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Аренда для курьеров</title>
 </head>
 <body>
     <div class="header__content  header__content-couriers" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/background/delivery-bg.webp);">
+        <div class="header__burger">
+            <span></span>
+        </div>
+        <nav class="header__nav nav">
+            <ul class="nav__list-device">
+
+                <li class="nav__item">
+                    <a class="nav__link" href="#couriers-scooters">самокаты</a>
+               </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="#couriers-bike">велосипеды</a>
+               </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="#couriers-phone">телефон</a>
+               </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="#link-answers">faq</a>
+               </li>
+
+               <li class="nav__item item-cabinet">
+                    <a class="link-cabinet" href="lk.html">личный кабинет</a>
+              </li>
+              
+                <li class="nav__item">
+                    <a class="btn header__btn" href="lk.html">Оформить подписку</a>
+                </li>
+            </ul>
+        </nav>
         <header class="header">
                  <div class="header__body container">
                             <div class="logo">
@@ -21,27 +53,19 @@
                                  <ul class="nav__list">
 
                                      <li class="nav__item">
-                                         <a class="nav__link" href="#">подписка</a>
+                                         <a class="nav__link" href="#couriers-scooters">самокаты</a>
                                     </li>
 
                                      <li class="nav__item">
-                                         <a class="nav__link" href="#">отзывы</a>
+                                         <a class="nav__link" href="#couriers-bike">велосипеды</a>
                                     </li>
 
                                      <li class="nav__item">
-                                         <a class="nav__link" href="#">о команде</a>
+                                         <a class="nav__link" href="#couriers-phone">телефон</a>
                                     </li>
 
                                      <li class="nav__item">
-                                         <a class="nav__link" href="#">faq</a>
-                                    </li>
-
-                                     <li class="nav__item">
-                                         <a class="nav__link" href="#">контакты</a>
-                                    </li>
-
-                                     <li class="nav__item">
-                                         <a class="nav__link" href="#">курьерам</a>
+                                         <a class="nav__link" href="#link-answers">faq</a>
                                     </li>
 
                                  </ul>
@@ -49,7 +73,7 @@
                              <div class="cabinet-entrance">
                                  <ul class="cabinet-entrance__list">
                                     <li class="nav__item item-cabinet">
-                                        <a class="nav__link link-cabinet" href="#">личный кабинет</a>
+                                        <a class="nav__link link-cabinet" href="lk.html">личный кабинет</a>
                                    </li>
                                  </ul>
                              </div>
@@ -68,14 +92,15 @@
                             в месяц.
                         </p>
                         <div class="btn-row">
-                            <a class="btn header__btn" href="#">Оформить подписку</a>
-                            <a class="btn header__btn specifications" href="#">Узнать подробнее</a>    
+                            <a class="btn header__btn" href="#popup">Оставить заявку</a>
+                            <a class="btn header__btn" href="#link-benefits">Узнать подробнее</a>    
                         </div>
                     </div>
             </div>
     </div>
 
     <div class="container">
+        <a id="link-benefits" class="nav__link-benefits"></a>
         <section>
             <div class="benefits-row benefits-couriers__row">
                 <div class="benefits-couriers__body">
@@ -155,8 +180,8 @@
                                     Обслуживай большее количество заказов и доставляй быстрее. «Крути колёса» поможет тебе снизить физическую нагрузку в течение рабочего дня.
                                 </p>
                                 <div class="btn-row">
-                                    <a class="btn rent-day__btn" href="#">Попробовать</a>
-                                    <a class="btn rent-day__btn specifications" href="#">Подробнее</a>    
+                                    <a class="btn rent-day__btn" href="#popup">Попробовать</a>
+                                    <a class="btn rent-day__btn specifications" href="#couriers-details">Подробнее</a>    
                                 </div>
                             </div>
                         </div>
@@ -228,10 +253,11 @@
                 </div>
             </div>
         </section>
+        <a id="couriers-details" class="couriers-details"></a>
         <section>
             <div class="why-rent">
                 <h2 class="why-rent__title">
-                    Зачем курьеру арендовать транспорт?
+                    Зачем курьеру <span class="span-yellow">арендовать</span> транспорт?
                 </h2>
                 <div class="why-rent__body">
 
@@ -319,13 +345,14 @@
                             </div>
                         </div>
                 </div>
-                    <a class="btn why-rent__btn" href="#">Оставить заявку</a>
+                    <a class="btn why-rent__btn" href="#popup">Оставить заявку</a>
             </div>
         </section>
+        <a id="couriers-scooters" class="nav__link-scooters"></a>
         <section>
             <div class="couriers-model">
                 <h2 class="couriers-model__title">
-                    Выбери свою идеальную модель
+                    Выбери свою идеальную <span class="span-yellow">модель</span>
                 </h2>
                  <h3 class="couriers-model__subtitle">
                     ЭЛЕКТРОТРАНСПОРТ
@@ -355,10 +382,10 @@
                                 <p class="couriers-model__price-text">
                                     <span>+ 400 ₽</span> тариф <a href="#">"Защита"</a>
                                 </p>
-                                <a href="#" class="btn couriers-model__btn">
+                                <a href="#popup" class="btn couriers-model__btn">
                                     Оставить заявку
                                 </a>
-                                <a href="#" class="btn couriers-model__btn specifications">
+                                <a href="#popup-yamato0809Pro" class="btn couriers-model__btn specifications">
                                     Характеристики
                                 </a>
                          </div>
@@ -388,10 +415,10 @@
                                <p class="couriers-model__price-text">
                                    <span>+ 400 ₽</span> тариф <a href="#">"Защита"</a>
                                </p>
-                               <a href="#" class="btn couriers-model__btn">
+                               <a href="#popup" class="btn couriers-model__btn">
                                    Оставить заявку
                                </a>
-                               <a href="#" class="btn couriers-model__btn specifications">
+                               <a href="#popup-minakov8pro" class="btn couriers-model__btn specifications">
                                    Характеристики
                                </a>
                         </div>
@@ -421,15 +448,16 @@
                                <p class="couriers-model__price-text">
                                    <span>+ 400 ₽</span> тариф <a href="#">"Защита"</a>
                                </p>
-                               <a href="#" class="btn couriers-model__btn">
+                               <a href="#popup" class="btn couriers-model__btn">
                                    Оставить заявку
                                </a>
-                               <a href="#" class="btn couriers-model__btn specifications">
+                               <a href="#popup-minakov8pro" class="btn couriers-model__btn specifications">
                                    Характеристики
                                </a>
                         </div>
                     </div>
                  </div>
+                 <a id="couriers-bike" class="nav__link-bike"></a>
                  <h3 class="couriers-model__subtitle">
                     Велосипеды
                  </h3>
@@ -458,7 +486,7 @@
                                <p class="couriers-model__price-text">
                                    <span>+ 400 ₽</span> тариф <a href="#">"Защита"</a>
                                </p>
-                               <a href="#" class="btn couriers-model__btn">
+                               <a href="#popup" class="btn couriers-model__btn">
                                    Оставить заявку
                                </a>
                         </div>
@@ -488,7 +516,7 @@
                                <p class="couriers-model__price-text">
                                    <span>+ 400 ₽</span> тариф <a href="#">"Защита"</a>
                                </p>
-                               <a href="#" class="btn couriers-model__btn">
+                               <a href="#popup" class="btn couriers-model__btn">
                                    Оставить заявку
                                </a>
                         </div>
@@ -518,7 +546,7 @@
                                <p class="couriers-model__price-text">
                                    <span>+ 400 ₽</span> тариф <a href="#">"Защита"</a>
                                </p>
-                               <a href="#" class="btn couriers-model__btn">
+                               <a href="#popup" class="btn couriers-model__btn">
                                    Оставить заявку
                                </a>
                         </div>
@@ -527,6 +555,7 @@
             </div>
         </section>
     </div>
+    <a id="couriers-phone" class="nav__link-phone"></a>
     <section>
         <div class="phone-work" style="background-image: url(images/background/phone-work__bg.webp);">
             <div class="container">
@@ -544,10 +573,10 @@
                         <p class="phone-work__text">
                             Нужен телефон для работы курьером? Оформи подписку на самокат или велосипед и возьми <span class="span-yellow">ВСЕГО ЗА 990₽ / МЕСЯЦ</span> мощный смартфон <span class="phone-work__xiaomi">Xiaomi Redmi 9A 32.</span> Держатель идет в комплекте
                         </p>
-                        <a href="#" class="btn phone-work__btn">
+                        <a href="#popup" class="btn phone-work__btn">
                             Получить телефон
                         </a>
-                        <a href="#" class="btn phone-work__btn specifications">
+                        <a href="#popup-xiaomiredmi" class="btn phone-work__btn specifications">
                             Характеристики
                         </a>
                     </div>
@@ -559,7 +588,7 @@
         <section>
           <div class="clients-couriers">
               <h2 class="clients-couriers__title">
-                Среди наших клиентов курьеры из:
+                Среди наших клиентов <span class="span-yellow">курьеры</span> из:
               </h2>
               <div class="clients-couriers__body">
                   <div class="clients-couriers__colums">
@@ -660,6 +689,7 @@
               </div>
           </div>
         </section>
+        <a id="link-answers" class="nav__link-answers"></a>
         <section>
             <div class="questions-answers">
                 <h2 class="questions-answers__title">
@@ -1065,8 +1095,268 @@
 
 
 
+<!-- попап выбор модели девайса начало -->
+
+    <section id="popup" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a class="popup__close" href="#header"></a>
+                
+                <form class="popup__form" action="#" method="post">
+                    <fieldset class="popup__form-container">
+
+                        <legend class="popup__title">
+                            Оформить подписку
+                        </legend>
+                        <p class="popup__pgf">
+                            <input type="text" name="name-user" placeholder="Ваше имя">
+                        </p>
+                        <p class="popup__pgf">
+                            <input type="tel" name="phone" placeholder="Номер телефона">
+                        </p>
+                        <p class="popup__pgf">
+                            <span>Девайсы</span>
+                            <select name="devices[]">
+                                <option value="Электросамокат Yamato 0809 Pro">
+                                    Электросамокат Yamato 0809 Pro
+                                </option>
+                                <option value="Электровелосипед Minako V8 Pro">
+                                    Электровелосипед Minako V8 Pro
+                                </option>
+                                <option value="Электровелосипед Minako V8 Pro + дополнительная батарея Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                    Электровелосипед Minako V8 Pro + доп. батарея
+                                </option>
+                                <option value="Горный велосипед Forward SPORTING 29 X или аналог">
+                                    Горный велосипед Forward SPORTING 29 X
+                                </option>
+                                <option value="Складной велосипед Forward ARSENAL 20 1.0 или аналог">
+                                    Складной велосипед Forward ARSENAL 20 1.0
+                                </option>
+                                <option value="Горный велосипед Forward SPORTING 27,5 3.0 disc или аналог">
+                                    Горный велосипед Forward SPORTING 27,5 3.0 disc
+                                </option>
+                                <option value="Cмартфон Xiaomi Redmi 9A 32">
+                                    Cмартфон Xiaomi Redmi 9A 32
+                                </option>
+                                <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                    Нужна консультация по выбору девайса (бесплатно)
+                                </option>
+                            </select>
+                        </p>
+                        <p class="popup__pgf">
+                            <label for="promo">Введите промокод (если есть)</label>
+                            <input type="text" name="promo-text" id="promo" placeholder="Промокод">
+                        </p>
+                        <p class="popup__pgf">
+                            <span>Способ получения</span>
+                            <select name="Method-obtaining[]">
+                                <option value="Самовывоз (Бесплатно)">
+                                    Самовывоз (Бесплатно)
+                                </option>
+                                <option value="Доставка курьером (Бесплатно)">
+                                    Доставка курьером (Бесплатно)
+                                </option>
+                            </select>
+                        </p>
+                        <p class="popup__pgf">
+                            <span>Удобный способ связи</span>
+                            <select name="way-communication[]">
+                                <option value="Звонок">
+                                    Звонок
+                                </option>
+                                <option value="WhatsApp">
+                                    WhatsApp
+                                </option>
+                            </select>
+                        </p>
+
+                        <button class="btn popup__btn" type="submit">
+                            Оформить
+                        </button>
+                        <p class="popup__text">
+                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="#">политикой обработки персональных данных.</a>
+                        </p>
+
+                    </fieldset>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- попап с Характеристиками девайса начало -->
+
+    <section id="popup-yamato0809Pro" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content popup-specifications__content">
+                <a class="popup__close" href="#header"></a>
+                <h4 class="popup__specifications-title">
+                    Характеристики <span class="span-yellow">Yamato 0809 Pro</span>
+                </h4>
+                <div class="popup__specifications-container">
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Вес: <span>12 кг</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Габариты (ДхШхВ): <span>109х43х103 см</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Высота руля: <span>90 см от дэки до ручек (нерегулируемая)</span>
+                        </li>
+                    </ul>
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Размер колес: <span>8 дюймов</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Колеса: <span>заднее безвоздушное, переднее надувное</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Тормоз: <span>ручной электрический</span>
+                        </li>
+                    </ul>
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Максимальная нагрузка: <span>120 кг</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Максимальная скорость: <span>25 км/ч</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Пробег на одном заряде: <span>до 35 км</span>
+                        </li>
+                    </ul>
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <section id="popup-minakov8pro" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content popup-specifications__content">
+                <a class="popup__close" href="#header"></a>
+                <h4 class="popup__specifications-title">
+                    Характеристики <span class="span-yellow">Minako V.8 Pro + доп. батарея</span>
+                </h4>
+                <div class="popup__specifications-container">
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Вес: <span>28 кг</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Размер колес: <span>18 дюймов</span>
+                        </li>
+                    </ul>
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Привод: <span>задний</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Максимальная нагрузка: <span>120 кг</span>
+                        </li>
+                    </ul>
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Максимальная скорость: <span>25 км/ч</span>
+                        </li>
+                        <li class="popup-specifications__item">
+                            Пробег на одном заряде: <span>до 45 км</span>
+                        </li>
+                    </ul>
+                    <ul class="popup-specifications__list">
+                        <li class="popup-specifications__item">
+                            Защита от влаги и пыли: <span>IP-75 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="popup-xiaomiredmi" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content popup-phone__content">
+                <a class="popup__close" href="#header"></a>
+
+                <div class="console-specifications">
+                    <h2 class="console-specifications__title">
+                        Характеристики смартфона
+                    </h2>
+                    <h3 class="console-specifications__subtitle">
+                        <span class="span-yellow">Xiaomi Redmi</span> 9A 32
+                    </h3>
+                    <div class="console-specifications__body">
+                        <div class="console-specifications__column">
+                            <ul class="console-specifications__list">
+                                <li class="console-specifications__item">
+                                    Операционная система:
+                                    <span class="console-specifications__span">
+                                    Android
+                                    </span>
+                                </li>
+                                <li class="console-specifications__item">
+                                    Количество сим-карт:
+                                    <span class="console-specifications__span">
+                                    2
+                                    </span>
+                                </li>
+                                <li class="console-specifications__item">
+                                    Встроенная память:
+                                    <span class="console-specifications__span">
+                                    32 Гб
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="console-specifications__box-images">
+                            <div class="console-specifications__images">
+                                <img src="images/popup/specification-phone.png" alt="">
+                           </div>
+                        </div>
+
+                        <div class="console-specifications__column">
+                            <ul class="console-specifications__list">
+                                <li class="console-specifications__item">
+                                    Время работы в режиме ожидания:
+                                    <span class="console-specifications__span">
+                                    816 ч
+                                    </span>
+                                </li>
+                                <li class="console-specifications__item">
+                                    Время работы в режиме разговора:
+                                    <span class="console-specifications__span">
+                                    38 ч
+                                    </span>
+                                </li>
+                                <li class="console-specifications__item">
+                                    Разрешение экрана:
+                                    <span class="console-specifications__span">
+                                    1600x720
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
