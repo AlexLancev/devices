@@ -194,7 +194,7 @@ button{
 }
 
 .nav__list-device .item-cabinet{
-    max-width: 240px;
+    max-width: 200px;
     margin: auto;
     padding: 10px;
     border-radius: 40px;
@@ -265,9 +265,10 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
-    max-width: 320px;
-    min-height: 60px;
+    max-width: 200px;
+    padding: 15px;
 }
 
 
@@ -362,11 +363,19 @@ button{
 }
 
 .header-device .item-cabinet{
-    max-width: 240px;
+    max-width: 200px;
     margin: auto;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 15px;
+    font-size: 12px;
     border-radius: 90px;
+}
+
+.header__btn-device{
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    text-align: center;
 }
 
 .nav__list-device{
@@ -1607,8 +1616,17 @@ span.subscription-cooler__price{
     max-width: 500px;
 }
 
+.header__info-box .btn-row{
+    max-width: 425px;
+}
+
+.header__info-box .header__btn{
+    max-width: 200px;
+    padding: 16px;
+}
+
+
 .btn-row .btn{
-    max-width: 230px;
     margin-right: 10px;
 }
 
@@ -1616,11 +1634,7 @@ span.subscription-cooler__price{
     margin-right: 0px;
 }
 
-.header__info-box .btn{
-    width: 100%;
-    max-width: 240px;
-    padding: 20px;
-}
+
 
 .benefits-couriers__row {
     margin-bottom: 100px;
@@ -2735,6 +2749,9 @@ span.subscription-cooler__price{
 }
 
 .console-specifications__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 530px;
     height: 475px;
@@ -2861,11 +2878,12 @@ span.subscription-cooler__price{
 .popup__title {
     text-align: center;
     font-size: 30px;
+    line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .popup-certificate__form{
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .popup__pgf{
@@ -2951,6 +2969,7 @@ span.subscription-cooler__price{
     font-size: 25px;
     margin-bottom: 30px;
     text-transform: capitalize;
+    text-align: center;
 }
 
 .popup__specifications-container{
@@ -2961,6 +2980,9 @@ span.subscription-cooler__price{
 .popup-specifications__list {
     border-bottom: 1px solid rgba(90, 90, 90, 0.1);
     padding: 15px 0;
+}
+.popup-specifications__list > *:last-child{
+    margin-bottom: 0;
 }
 
 .popup-specifications__item {
@@ -3005,6 +3027,10 @@ span.subscription-cooler__price{
     margin-bottom: 0;
 }
 
+.popup-phone__content .console-specifications{
+    margin-bottom: 0;
+}
+
 .popup-phone__content .console-specifications__images::before,
 .popup-phone__content .console-specifications__images::after{
     content: none;
@@ -3021,7 +3047,138 @@ span.subscription-cooler__price{
 
 .popup-phone__content .console-specifications__box-images{
     margin: 0 20px;
+    margin-bottom: 50px;
 }
+
+
+
+
+
+
+/* popup-start */
+
+.popup {
+    position: fixed;
+    z-index: 111;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup__area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.popup__content{
+    background-color: #EBEBEB;
+    color: #000000;
+    width: 100%;
+    max-width: 460px;
+    padding: 40px 30px;
+    position: relative;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translate(0, -100%);
+}
+.popup-specifications__content{
+    max-width: 1000px;
+}
+.popup-phone__content{
+    max-width: 1200px;
+}
+.popup-friend__content{
+    padding: 0;
+    padding-bottom: 30px;
+    max-width: 560px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.popup-certificate__content{
+    padding: 0;
+    padding-bottom: 30px;
+}
+
+.popup__close{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.popup__close:before,
+.popup__close:after{
+    content: '';
+    width: 24px;
+    height: 3px;
+    background-color: #3596F5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.popup__close:before{
+    transform: rotate(45deg);
+}
+.popup__close:hover:before{
+    transform: rotate(135deg);
+}
+
+.popup__close:after{
+    transform: rotate(-45deg);
+}
+.popup__close:hover:after{
+    transform: rotate(-135deg);
+}
+
+.popup__close:hover:before,
+.popup__close:hover:after{
+    background-color: #ff0202;
+}
+
+
+/* popup-stop */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3065,6 +3222,7 @@ span.subscription-cooler__price{
     .console-specifications__body{
         flex-wrap: wrap-reverse;
         justify-content: center;
+        align-items: flex-end;
     }
 
     .console-specifications__box-images{
@@ -3245,6 +3403,15 @@ span.subscription-cooler__price{
 
 
 
+@media (max-width: 880px){
+
+    .popup-phone__content .console-specifications__column:last-child{
+        margin-bottom: 25px;
+    }
+}
+
+
+
 
 
 @media (max-width: 840px){
@@ -3358,11 +3525,6 @@ span.subscription-cooler__price{
 
     .btn-row{
         margin: auto;
-    }
-
-    .header__info-box .btn{
-        max-width: 200px;
-        padding: 15px;
     }
 
     .btn-row .btn{
@@ -3575,6 +3737,19 @@ span.subscription-cooler__price{
     .device-benefits__heading{
         text-align: center;
     }
+
+    .popup-phone__content .console-specifications__box-images{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .popup-phone__content .console-specifications__images{
+        padding: 0 25px;
+    }
+
+    .popup-phone__content .console-specifications__images img{
+        width: auto;
+    }
 }
 
 
@@ -3727,6 +3902,10 @@ span.subscription-cooler__price{
         margin-top: -10px;
         -webkit-background-clip: content-box;
         background-clip: content-box;
+    }
+
+    .popup__specifications-title{
+        margin-bottom: 20px;
     }
 }
 
@@ -3959,6 +4138,33 @@ span.subscription-cooler__price{
 
 
 
+@media (max-width: 500px){
+
+    .popup__body{
+        padding: 25px;
+    }
+
+    .popup__images{
+        margin-bottom: 30px;
+    }
+
+    .popup-friend__title{
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+
+    .popup-friend__text{
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .popup__btn{
+        font-size: 11px;
+        max-width: 200px;
+        padding: 12px;
+    }
+}
+
 
 
 @media (max-width: 487px){
@@ -4112,7 +4318,7 @@ span.subscription-cooler__price{
     }
 
     .why-subscribe{
-        min-height: 550px;
+        min-height: 500px;
     }
 
     .device-benefits__body{
@@ -4276,6 +4482,90 @@ span.subscription-cooler__price{
         max-width: 180px;
     }
 
+    .popup__body-specifications .popup__content,
+    .popup__body-device .popup__content{
+        padding: 40px 20px 30px;
+        min-width: 285px;
+    }
+
+    .popup__title{
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .popup__pgf{
+        font-size: 15px;
+    }
+
+    .popup__pgf input{
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .popup__pgf span,
+    .popup__pgf label{
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .popup__pgf select{
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .popup__text{
+        font-size: 10px;
+    }
+
+    .popup__link{
+        font-size: 8px;
+    }
+
+    .popup__specifications-container{
+        padding: 5px;
+    }
+
+    .popup-certificate__form{
+        padding: 0 15px;
+    }
+
+    .popup-phone__content .console-specifications__body{
+        padding: 0;
+    }
+
+    .popup__content .console-specifications{
+        margin-bottom: 0;
+    }
+
+    .popup-phone__content .console-specifications__item{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .popup-phone__content .console-specifications__item:last-child{
+        margin-bottom: 0;
+    }
+
+    .popup-phone__content .console-specifications__column:last-child{
+        margin-bottom: 10px;
+    }
+
+    .popup-phone__content .console-specifications__body{
+        justify-content: flex-start;
+    }
+
+    .popup-phone__content {
+        padding: 40px 20px 25px;
+    }
+
+    .popup-phone__content .console-specifications__title{
+        margin-bottom: 5px;
+    }
+
+    .popup-phone__content .console-specifications__subtitle{
+        font-size: 14px;
+    }
+
 }
 
 
@@ -4435,131 +4725,53 @@ span.subscription-cooler__price{
         max-width: 180px;
         padding: 10px;
     }
+
+    .popup__body-specifications .popup__content,
+    .popup__body-device .popup__content{
+        padding: 35px 15px 20px;
+    }
+
+    .popup__title{
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .popup__pgf{
+        font-size: 15px;
+    }
+
+    .popup__pgf input{
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .popup__pgf span,
+    .popup__pgf label{
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .popup__pgf select{
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .popup__close{
+        top: 20px;
+        right: 10px;
+    }
+
+    .popup__btn{
+        max-width: 180px;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .popup__specifications-title{
+        font-size: 18px;
+    }
+
+    .popup-phone__content .console-specifications__box-images{
+        margin-bottom: 30px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* popup-start */
-
-.popup {
-    position: fixed;
-    z-index: 111;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.popup:target{
-    opacity: 1;
-    visibility: visible;
-}
-
-.popup:target .popup__content{
-    transform: translate(0px, 0px);
-    opacity: 1;
-}
-
-.popup__area{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.popup__body {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-.popup__content{
-    background-color: #EBEBEB;
-    color: #000000;
-    width: 100%;
-    max-width: 460px;
-    padding: 40px 30px;
-    position: relative;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translate(0, -100%);
-}
-.popup-specifications__content{
-    max-width: 1000px;
-}
-.popup-phone__content{
-    max-width: 1200px;
-}
-.popup-friend__content{
-    padding: 0;
-    padding-bottom: 30px;
-    max-width: 560px;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-.popup-certificate__content{
-    padding: 0;
-    padding-bottom: 30px;
-}
-
-.popup__close{
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 10px;
-}
-
-.popup__close:before,
-.popup__close:after{
-    content: '';
-    width: 24px;
-    height: 3px;
-    background-color: #3596F5;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: 0.3s;
-}
-
-.popup__close:before{
-    transform: rotate(45deg);
-}
-.popup__close:hover:before{
-    transform: rotate(135deg);
-}
-
-.popup__close:after{
-    transform: rotate(-45deg);
-}
-.popup__close:hover:after{
-    transform: rotate(-135deg);
-}
-
-.popup__close:hover:before,
-.popup__close:hover:after{
-    background-color: #ff0202;
-}
-
-
-/* popup-stop */
