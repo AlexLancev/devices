@@ -12,6 +12,7 @@ body {
   }
 
 body{
+    min-width: 320px;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -20,6 +21,16 @@ body{
     color: #000000;
     background-color: #f5f5f5;
     cursor: default;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
 }
 
 body.lock{
@@ -183,6 +194,7 @@ button{
     min-height: 650px;
     height: 100vh;
     padding-bottom: 20px;
+    background-color: #2b2b2b;
     background-size: cover;
     background-position: 70% 50%;
     background-repeat: no-repeat;
@@ -953,16 +965,10 @@ span.subscription-cooler__price{
 }
 
 .feedback__body {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-.feedback__column {
-    max-width: 360px;
-    min-height: 280px;
-    padding: 0 15px;
-    margin-bottom: 30px;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .feedback__item {
@@ -1177,18 +1183,10 @@ span.subscription-cooler__price{
 }
 
 .delivery-subscription__body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 -15px;
-}
-
-.delivery-subscription__column {
-    padding: 0 15px;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 358px;
-    min-height: 295px;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .delivery-subscription__item {
@@ -1519,6 +1517,7 @@ span.subscription-cooler__price{
 /* Личный кабинет старт*/
 
 .cabinets {
+    background-color: #494949;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% 50%;
@@ -1812,21 +1811,15 @@ span.subscription-cooler__price{
 }
 
 .why-rent__body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 -10px;
-}
-
-.why-rent__column {
-    width: 100%;
-    max-width: 355px;
-    padding: 0 10px;
-    margin-bottom: 40px;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .why-rent__item {
     height: 100%;
+    text-align: center;
 }
 
 .why-rent__item > *{
@@ -1841,6 +1834,7 @@ span.subscription-cooler__price{
     display: flex;
     align-items: flex-end;
     max-width: 60px;
+    margin: 0 auto 10px;
     height: 60px;
 }
 
@@ -1984,6 +1978,7 @@ span.subscription-cooler__price{
 
 .phone-work {
     margin-bottom: 100px;
+    background-color: #263040;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2095,6 +2090,7 @@ span.subscription-cooler__price{
     position: relative;
     min-height: 497px;
     height: 100vh;
+    background-color: #535353;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2312,6 +2308,7 @@ span.subscription-cooler__price{
 }
 
 .why-subscribe {
+    background-color: #414141;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2513,6 +2510,7 @@ span.subscription-cooler__price{
 .other-projects__item {
     width: 100%;
     height: 100%;
+    background-color: #2b2b2b;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2893,6 +2891,7 @@ span.subscription-cooler__price{
 }
 
 .popup__pgf{
+    display: block;
     margin-bottom: 20px;
 }
 
