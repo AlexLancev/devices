@@ -14,9 +14,9 @@
     <div class="wrapper">
 
         <div class="header__content" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/background/header-bg.webp);">
-            <div class="header__burger">
+            <button class="header__burger">
                 <span></span>
-            </div>
+            </button>
             <nav class="header__nav nav">
                 <ul class="nav__list-device">
     
@@ -55,11 +55,9 @@
             </nav>
             <header class="header">
                      <div class="header__body container">
-                                <div class="logo">
-                                    
+                                <a class="logo">
                                         <img src="images/images-svg/logo.svg" alt="Логотип компании Мой самокат">
-                                     
-                                 </div>
+                                </a>
                                  <nav class="header__nav nav">
                                      <ul class="nav__list">
     
@@ -277,7 +275,7 @@
     
                                                 <li class="choose-model__list-item">
                                                       <span>Тариф “Защита”</span>
-                                                      <span>+400 ₽</span><a href="#">Что это</a>
+                                                      <span>+400 ₽</span><a>Что это</a>
                                                 </li>
                                               </ul>
                                           </div>
@@ -290,12 +288,151 @@
                                       </div>
     
                                       <div class="choose-model__button">
-                                        <a class="btn choose-model__btn choose-model__device" href="#popup">
+                                        <a class="btn choose-model__btn choose-model__device popup-link" href="#popup1">
                                               Выбрать девайс
                                         </a>
-                                        <a class="btn choose-model__btn choose-model__specifications" href="#popup-yamato0809">
+                                        <!-- modal-start -->
+                                        <div id="popup1" class="popup" role="alert">
+                                            <div class="popup__body">
+                                                <div class="popup__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                    
+                                                    <form class="popup__form" action="#" method="post">
+                                                        <fieldset class="popup__form-container">
+
+                                                            <legend class="popup__title">
+                                                                Оформить подписку
+                                                            </legend>
+                                                            <label class="popup__pgf">
+                                                                <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            </label>
+                                                            <label class="popup__pgf">
+                                                                <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            </label>
+                                                            <label class="popup__pgf">
+                                                                <span>Девайсы</span>
+                                                                <select name="devices[]">
+                                                                    <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                                        Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                                    </option>
+                                                                    <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                                        Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                                    </option>
+                                                                    <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                                        Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                                    </option>
+                                                                    <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                                        Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                                    </option>
+                                                                    <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                                        Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                                    </option>
+                                                                    <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                                        Нужна консультация по выбору девайса (бесплатно)
+                                                                    </option>
+                                                                </select>
+                                                            </label>
+                                                            <label class="popup__pgf">
+                                                                <span>Введите промокод (если есть)</span>
+                                                                <input type="text" name="promo-text" placeholder="Промокод">
+                                                            </label>
+                                                            <label class="popup__pgf">
+                                                                <span>Способ получения</span>
+                                                                <select name="Method-obtaining[]">
+                                                                    <option value="Самовывоз (Бесплатно)">
+                                                                        Самовывоз (Бесплатно)
+                                                                    </option>
+                                                                    <option value="Доставка курьером (Бесплатно)">
+                                                                        Доставка курьером (Бесплатно)
+                                                                    </option>
+                                                                </select>
+                                                            </label>
+                                                            <label class="popup__pgf">
+                                                                <span>Удобный способ связи</span>
+                                                                <select name="way-communication[]">
+                                                                    <option value="Звонок">
+                                                                        Звонок
+                                                                    </option>
+                                                                    <option value="WhatsApp">
+                                                                        WhatsApp
+                                                                    </option>
+                                                                </select>
+                                                            </label>
+
+                                                            <button class="btn popup__btn" type="submit">
+                                                                Оформить
+                                                            </button>
+                                                            <p class="popup__text">
+                                                                Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                                            </p>
+
+                                                        </fieldset>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
+                                        <a class="btn choose-model__btn choose-model__specifications popup-link" href="#popup-yamato0809">
                                               Характеристики
                                         </a>
+                                        <!-- modal-start -->
+                                        <div id="popup-yamato0809" class="popup" role="alert">
+                                            <div class="popup__body popup__body-specifications">
+                                                <div class="popup__content popup-specifications__content">
+                                                    <button type="button" class="popup__close close-popup"
+                                                        aria-label="закрыть модальное окно"></button>
+
+                                                    <h4 class="popup__specifications-title">
+                                                        Характеристики <span class="span-yellow">Yamato 0809</span>
+                                                    </h4>
+                                                    <div class="popup__specifications-container">
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Вес: <span>11 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Габариты (ДхШхВ): <span>109х43х103 см</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Высота руля: <span>90 см от дэки до ручек
+                                                                    (нерегулируемая)</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Размер колес: <span>8 дюймов</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Колеса: <span>заднее безвоздушное, переднее надувное</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Тормоз: <span>ручной электрический</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Максимальная нагрузка: <span>120 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Максимальная скорость: <span>25 км/ч</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Пробег на одном заряде: <span>до 15 км</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и
+                                                                    пылезащита, можно ездить в дождь)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                       </div>
                                   </div>
                               </div>
@@ -331,7 +468,7 @@
     
                                               <li class="choose-model__list-item">
                                                     <span>Тариф “Защита”</span>
-                                                    <span>+400 ₽</span><a href="#">Что это</a>
+                                                    <span>+400 ₽</span><a>Что это</a>
                                               </li>
                                             </ul>
                                         </div>
@@ -344,16 +481,155 @@
                                     </div>
     
                                     <div class="choose-model__button">
-                                      <a class="btn choose-model__btn choose-model__device" href="#popup">
+                                      <a class="btn choose-model__btn choose-model__device popup-link" href="#popup2">
                                             Выбрать девайс
                                       </a>
-                                      <a class="btn choose-model__btn choose-model__specifications" href="#popup-aovo365MPro">
+                                        <!-- modal-start -->
+                                        <div id="popup2" class="popup" role="alert">
+                                        <div class="popup__body">
+                                            <div class="popup__content">
+                                                <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                
+                                                <form class="popup__form" action="#" method="post">
+                                                    <fieldset class="popup__form-container">
+
+                                                        <legend class="popup__title">
+                                                            Оформить подписку
+                                                        </legend>
+                                                        <label class="popup__pgf">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Девайсы</span>
+                                                            <select name="devices[]">
+                                                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                                </option>
+                                                                <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                                    Нужна консультация по выбору девайса (бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Введите промокод (если есть)</span>
+                                                            <input type="text" name="promo-text" placeholder="Промокод">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Способ получения</span>
+                                                            <select name="Method-obtaining[]">
+                                                                <option value="Самовывоз (Бесплатно)">
+                                                                    Самовывоз (Бесплатно)
+                                                                </option>
+                                                                <option value="Доставка курьером (Бесплатно)">
+                                                                    Доставка курьером (Бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Удобный способ связи</span>
+                                                            <select name="way-communication[]">
+                                                                <option value="Звонок">
+                                                                    Звонок
+                                                                </option>
+                                                                <option value="WhatsApp">
+                                                                    WhatsApp
+                                                                </option>
+                                                            </select>
+                                                        </label>
+
+                                                        <button class="btn popup__btn" type="submit">
+                                                            Оформить
+                                                        </button>
+                                                        <p class="popup__text">
+                                                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                                        </p>
+
+                                                    </fieldset>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- modal-end -->
+                                      <a class="btn choose-model__btn choose-model__specifications popup-link" href="#popup-aovo365MPro">
                                             Характеристики
                                       </a>
+                                        <!-- modal-start -->
+                                        <div id="popup-aovo365MPro" class="popup" role="alert">
+                                            <div class="popup__body">
+                                                <div class="popup__content popup-specifications__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                    
+                                                    <h4 class="popup__specifications-title">
+                                                        Характеристики <span class="span-yellow">Aovo 365M Pro</span>
+                                                    </h4>
+                                                    
+                                                    <div class="popup__specifications-container">
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Вес: <span>12.5 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Габариты (ДхШхВ): <span>107х43х110 см</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Высота руля: <span>95 см от дэки до ручек (нерегулируемая)</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Размер колес: <span>8.5 дюймов</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Колеса: <span>безвоздушные</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Тормоз: <span>ручной дисковой</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Максимальная нагрузка: <span>120 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Максимальная скорость: <span>25 км/ч</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Пробег на одном заряде: <span>до 25 км</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                     </div>
     
                                 </div>
-                            </div>
+                              </div>
+
+                                
     
                             <div class="choose-model__column">
                                 <div class="choose-model__item card">
@@ -386,7 +662,7 @@
     
                                               <li class="choose-model__list-item">
                                                     <span>Тариф “Защита”</span>
-                                                    <span>+400 ₽</span><a href="#">Что это</a>
+                                                    <span>+400 ₽</span><a>Что это</a>
                                               </li>
                                             </ul>
                                         </div>
@@ -398,12 +674,149 @@
                                     </div>
     
                                     <div class="choose-model__button">
-                                      <a class="btn choose-model__btn choose-model__device" href="#popup">
+                                      <a class="btn choose-model__btn choose-model__device popup-link" href="#popup3">
                                             Выбрать девайс
                                       </a>
-                                      <a class="btn choose-model__btn choose-model__specifications" href="#popup-yamato0809Pro">
+                                        <!-- modal-start -->
+                                        <div id="popup3" class="popup" role="alert">
+                                        <div class="popup__body">
+                                            <div class="popup__content">
+                                                <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                
+                                                <form class="popup__form" action="#" method="post">
+                                                    <fieldset class="popup__form-container">
+
+                                                        <legend class="popup__title">
+                                                            Оформить подписку
+                                                        </legend>
+                                                        <label class="popup__pgf">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Девайсы</span>
+                                                            <select name="devices[]">
+                                                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                                </option>
+                                                                <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                                    Нужна консультация по выбору девайса (бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Введите промокод (если есть)</span>
+                                                            <input type="text" name="promo-text" placeholder="Промокод">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Способ получения</span>
+                                                            <select name="Method-obtaining[]">
+                                                                <option value="Самовывоз (Бесплатно)">
+                                                                    Самовывоз (Бесплатно)
+                                                                </option>
+                                                                <option value="Доставка курьером (Бесплатно)">
+                                                                    Доставка курьером (Бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Удобный способ связи</span>
+                                                            <select name="way-communication[]">
+                                                                <option value="Звонок">
+                                                                    Звонок
+                                                                </option>
+                                                                <option value="WhatsApp">
+                                                                    WhatsApp
+                                                                </option>
+                                                            </select>
+                                                        </label>
+
+                                                        <button class="btn popup__btn" type="submit">
+                                                            Оформить
+                                                        </button>
+                                                        <p class="popup__text">
+                                                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                                        </p>
+
+                                                    </fieldset>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- modal-end -->
+                                      <a class="btn choose-model__btn choose-model__specifications popup-link" href="#popup-yamato0809Pro">
                                             Характеристики
                                       </a>
+                                        <!-- modal-start -->
+                                        <div id="popup-yamato0809Pro" class="popup" role="alert">
+                                            <div class="popup__body">
+                                                <div class="popup__content popup-specifications__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                    
+                                                    <h4 class="popup__specifications-title">
+                                                        Характеристики <span class="span-yellow">Yamato 0809 Pro</span>
+                                                    </h4>
+                                                    
+                                                    <div class="popup__specifications-container">
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Вес: <span>12 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Габариты (ДхШхВ): <span>109х43х103 см</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Высота руля: <span>90 см от дэки до ручек (нерегулируемая)</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Размер колес: <span>8 дюймов</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Колеса: <span>заднее безвоздушное, переднее надувное</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Тормоз: <span>ручной электрический</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Максимальная нагрузка: <span>120 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Максимальная скорость: <span>25 км/ч</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Пробег на одном заряде: <span>до 35 км</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                     </div>
     
                                 </div>
@@ -461,12 +874,139 @@
                                     </div>
     
                                     <div class="choose-model__button">
-                                      <a class="btn choose-model__btn choose-model__device bike__btn-device" href="#popup">
+                                      <a class="btn choose-model__btn choose-model__device bike__btn-device popup-link" href="#popup4">
                                             Выбрать девайс
                                       </a>
-                                      <a class="btn choose-model__btn choose-model__specifications bike__btn-specifications" href="#popup-forwardsporting">
+                                      <!-- modal-start -->
+                                      <div id="popup4" class="popup" role="alert">
+                                        <div class="popup__body">
+                                            <div class="popup__content">
+                                                <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                
+                                                <form class="popup__form" action="#" method="post">
+                                                    <fieldset class="popup__form-container">
+
+                                                        <legend class="popup__title">
+                                                            Оформить подписку
+                                                        </legend>
+                                                        <label class="popup__pgf">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Девайсы</span>
+                                                            <select name="devices[]">
+                                                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                                </option>
+                                                                <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                                    Нужна консультация по выбору девайса (бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Введите промокод (если есть)</span>
+                                                            <input type="text" name="promo-text" placeholder="Промокод">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Способ получения</span>
+                                                            <select name="Method-obtaining[]">
+                                                                <option value="Самовывоз (Бесплатно)">
+                                                                    Самовывоз (Бесплатно)
+                                                                </option>
+                                                                <option value="Доставка курьером (Бесплатно)">
+                                                                    Доставка курьером (Бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Удобный способ связи</span>
+                                                            <select name="way-communication[]">
+                                                                <option value="Звонок">
+                                                                    Звонок
+                                                                </option>
+                                                                <option value="WhatsApp">
+                                                                    WhatsApp
+                                                                </option>
+                                                            </select>
+                                                        </label>
+
+                                                        <button class="btn popup__btn" type="submit">
+                                                            Оформить
+                                                        </button>
+                                                        <p class="popup__text">
+                                                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                                        </p>
+
+                                                    </fieldset>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- modal-end -->
+                                      <a class="btn choose-model__btn choose-model__specifications bike__btn-specifications popup-link" href="#popup-forwardsporting">
                                             Характеристики
                                       </a>
+                                        <!-- modal-start -->
+                                        <div id="popup-forwardsporting" class="popup" role="alert">
+                                            <div class="popup__body">
+                                                <div class="popup__content popup-specifications__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                    
+                                                    <h4 class="popup__specifications-title">
+                                                        Характеристики <span class="span-yellow">Forward SPORTING</span>
+                                                    </h4>
+                                                    <div class="popup__specifications-container">
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Вес: <span>16 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Материал рамы: <span>сталь</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Размер колес: <span>29 дюймов</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Тип тормозов: <span>дисковые</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Количество скоростей: <span>21</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Возраст: <span>для взрослых</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Возможно оформить с тарифом "Защита"
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                     </div>
                                 </div>
                             </div>
@@ -513,12 +1053,142 @@
                                     </div>
     
                                     <div class="choose-model__button">
-                                      <a class="btn choose-model__btn choose-model__device bike__btn-device" href="#popup">
+                                      <a class="btn choose-model__btn choose-model__device bike__btn-device popup-link" href="#popup5">
                                             Выбрать девайс
                                       </a>
-                                      <a class="btn choose-model__btn choose-model__specifications bike__btn-specifications" href="#popup-forwardsportingx">
+                                        <!-- modal-start -->
+                                        <div id="popup5" class="popup" role="alert">
+                                        <div class="popup__body">
+                                            <div class="popup__content">
+                                                <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                
+                                                <form class="popup__form" action="#" method="post">
+                                                    <fieldset class="popup__form-container">
+
+                                                        <legend class="popup__title">
+                                                            Оформить подписку
+                                                        </legend>
+                                                        <label class="popup__pgf">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Девайсы</span>
+                                                            <select name="devices[]">
+                                                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                                </option>
+                                                                <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                                    Нужна консультация по выбору девайса (бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Введите промокод (если есть)</span>
+                                                            <input type="text" name="promo-text" placeholder="Промокод">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Способ получения</span>
+                                                            <select name="Method-obtaining[]">
+                                                                <option value="Самовывоз (Бесплатно)">
+                                                                    Самовывоз (Бесплатно)
+                                                                </option>
+                                                                <option value="Доставка курьером (Бесплатно)">
+                                                                    Доставка курьером (Бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Удобный способ связи</span>
+                                                            <select name="way-communication[]">
+                                                                <option value="Звонок">
+                                                                    Звонок
+                                                                </option>
+                                                                <option value="WhatsApp">
+                                                                    WhatsApp
+                                                                </option>
+                                                            </select>
+                                                        </label>
+
+                                                        <button class="btn popup__btn" type="submit">
+                                                            Оформить
+                                                        </button>
+                                                        <p class="popup__text">
+                                                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                                        </p>
+
+                                                    </fieldset>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- modal-end -->
+                                      <a class="btn choose-model__btn choose-model__specifications bike__btn-specifications popup-link" href="#popup-forwardsportingx">
                                             Характеристики
                                       </a>
+                                        <!-- modal-start -->
+                                        <div id="popup-forwardsportingx" class="popup" role="alert">
+                                            <div class="popup__body">
+                                                <div class="popup__content popup-specifications__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                
+                                                    <h4 class="popup__specifications-title">
+                                                        Характеристики <span class="span-yellow">Forward SPORTING X</span>
+                                                    </h4>
+                                                    <div class="popup__specifications-container">
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Вес: <span>16 кг</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Материал рамы: <span>сталь</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Размер колес: <span>29 дюймов</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Тип: <span>горный</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Тип тормозов: <span>дисковые</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Количество скоростей: <span>28</span>
+                                                            </li>
+                                                            <li class="popup-specifications__item">
+                                                                Возраст: <span>для взрослых</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="popup-specifications__list">
+                                                            <li class="popup-specifications__item">
+                                                                Возможно оформить с тарифом "Защита"
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                     </div>
                                 </div>
                             </div>
@@ -543,7 +1213,91 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn benefits-row__btn" href="#popup">оформить подписку</a>
+                        <a class="btn benefits-row__btn popup-link" href="#popup7">
+                            оформить подписку
+                        </a>
+                            <!-- modal-start -->
+                            <div id="popup7" class="popup" role="alert">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                    
+                                    <form class="popup__form" action="#" method="post">
+                                        <fieldset class="popup__form-container">
+
+                                            <legend class="popup__title">
+                                                Оформить подписку
+                                            </legend>
+                                            <label class="popup__pgf">
+                                                <input type="text" name="name-user" placeholder="Ваше имя">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <input type="tel" name="phone" placeholder="Номер телефона">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Девайсы</span>
+                                                <select name="devices[]">
+                                                    <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                        Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                        Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                        Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                        Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                        Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                    </option>
+                                                    <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                        Нужна консультация по выбору девайса (бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Введите промокод (если есть)</span>
+                                                <input type="text" name="promo-text" placeholder="Промокод">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Способ получения</span>
+                                                <select name="Method-obtaining[]">
+                                                    <option value="Самовывоз (Бесплатно)">
+                                                        Самовывоз (Бесплатно)
+                                                    </option>
+                                                    <option value="Доставка курьером (Бесплатно)">
+                                                        Доставка курьером (Бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Удобный способ связи</span>
+                                                <select name="way-communication[]">
+                                                    <option value="Звонок">
+                                                        Звонок
+                                                    </option>
+                                                    <option value="WhatsApp">
+                                                        WhatsApp
+                                                    </option>
+                                                </select>
+                                            </label>
+
+                                            <button class="btn popup__btn" type="submit">
+                                                Оформить
+                                            </button>
+                                            <p class="popup__text">
+                                                Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                            </p>
+
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                            </div>
+                            <!-- modal-end -->
                     </div>
                 </section>
                 <section>
@@ -646,7 +1400,91 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn benefits-row__btn" href="#popup">хочу подписку</a>
+                        <a class="btn benefits-row__btn popup-link" href="#popup6">
+                            хочу подписку
+                        </a>
+                         <!-- modal-start -->
+                         <div id="popup6" class="popup" role="alert">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                    
+                                    <form class="popup__form" action="#" method="post">
+                                        <fieldset class="popup__form-container">
+
+                                            <legend class="popup__title">
+                                                Оформить подписку
+                                            </legend>
+                                            <label class="popup__pgf">
+                                                <input type="text" name="name-user" placeholder="Ваше имя">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <input type="tel" name="phone" placeholder="Номер телефона">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Девайсы</span>
+                                                <select name="devices[]">
+                                                    <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                        Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                        Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                        Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                        Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                        Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                    </option>
+                                                    <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                        Нужна консультация по выбору девайса (бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Введите промокод (если есть)</span>
+                                                <input type="text" name="promo-text" placeholder="Промокод">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Способ получения</span>
+                                                <select name="Method-obtaining[]">
+                                                    <option value="Самовывоз (Бесплатно)">
+                                                        Самовывоз (Бесплатно)
+                                                    </option>
+                                                    <option value="Доставка курьером (Бесплатно)">
+                                                        Доставка курьером (Бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Удобный способ связи</span>
+                                                <select name="way-communication[]">
+                                                    <option value="Звонок">
+                                                        Звонок
+                                                    </option>
+                                                    <option value="WhatsApp">
+                                                        WhatsApp
+                                                    </option>
+                                                </select>
+                                            </label>
+
+                                            <button class="btn popup__btn" type="submit">
+                                                Оформить
+                                            </button>
+                                            <p class="popup__text">
+                                                Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                            </p>
+
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                            </div>
+                            <!-- modal-end -->
                     </div>
                 </section>
                     <section>
@@ -681,7 +1519,35 @@
                                                 <img src="images/images-svg/item-17.svg" alt="Графическое изображение двух уточек">
                                             </figure>
                                         </div>
-                                        <a class="subscription-cooler__btn btn" href="#popup-friend">У меня есть друг</a>
+                                        <a class="subscription-cooler__btn btn popup-link" href="#popup-friend">
+                                            У меня есть друг
+                                        </a>
+                                         <!-- modal-start -->
+                                        <div id="popup-friend" class="popup" role="alert">
+                                            <div class="popup__body">
+                                                <div class="popup__content popup-friend__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                    
+                                                    <div class="popup__images">
+                                                        <img src="images/popup/popup-friend.webp" alt="">
+                                                    </div>
+                                                    <h4 class="popup-friend__title">
+                                                        Приводи друзей
+                                                    </h4>
+                                                    <p class="popup-friend__text">
+                                                        и получай 5 бесплатных дней к своей подписке и подписке друга. Количество друзей не ограничено. Назови менеджеру ФИО друга, оформившего подписку, и мы добавим бонусы.
+                                                    </p>
+                                                    <a href="https://web.telegram.org/" aria-label="Перейти на сайт Телеграмм" class="btn popup__btn">
+                                                        Написать в Telegram
+                                                    </a>
+                                                    <a href="https://web.whatsapp.com/" aria-label="Перейти на сайт Ватсап" class="btn popup__btn">
+                                                        Написать в WhatsApp
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                     </div>
                                 </div>
         
@@ -702,11 +1568,110 @@
                                                 </p>
                                             </div>
                                             
-                                            <figure class="subscription-cooler__cell">
+                                            <figure class="subscription-cooler__images">
                                                 <img src="images/images-svg/item-18.svg" alt="Графическое изображение уточки у которой в мечтах подарки">
                                             </figure>
                                         </div>
-                                        <a class="subscription-cooler__btn btn" href="#popup-certificate">Подарить сертификат</a>
+                                        <a class="subscription-cooler__btn btn popup-link" href="#popup-certificate">
+                                            Подарить сертификат
+                                        </a>
+                                         <!-- modal-start -->
+                                        <div id="popup-certificate" class="popup" role="alert">
+                                            <div class="popup__body popup__body-certificate">
+                                                <div class="popup__content popup-certificate__content">
+                                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                                    
+                                                    <div class="popup__images">
+                                                    <img src="images/popup/popup-certificate.webp" alt="">
+                                                </div>
+                                                
+                                                <form class="popup__form popup-certificate__form" action="#" method="post">
+                                                    <fieldset class="popup__form-container">
+
+                                                        <legend class="popup__title">
+                                                            Оформить подписку
+                                                        </legend>
+                                                        <label class="popup__pgf">
+                                                            <span>Выберите срок аренды</span>
+                                                            <select name="Method-obtaining[]">
+                                                                <option value="Самовывоз (Бесплатно)">
+                                                                    Сертификат на 1 месяц — 3 900 ₽
+                                                                </option>
+                                                                <option value="Доставка курьером (Бесплатно)">
+                                                                    Сертификат на 2 месяца — 7 000 ₽
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Девайсы</span>
+                                                            <select name="devices[]">
+                                                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                                </option>
+                                                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                                </option>
+                                                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                                </option>
+                                                                <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                                    Нужна консультация по выбору девайса (бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Введите промокод (если есть)</span>
+                                                            <input type="text" name="promo-text" placeholder="Промокод">
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Способ получения</span>
+                                                            <select name="Method-obtaining[]">
+                                                                <option value="Самовывоз (Бесплатно)">
+                                                                    Самовывоз (Бесплатно)
+                                                                </option>
+                                                                <option value="Доставка курьером (Бесплатно)">
+                                                                    Доставка курьером (Бесплатно)
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                        <label class="popup__pgf">
+                                                            <span>Удобный способ связи</span>
+                                                            <select name="way-communication[]">
+                                                                <option value="Звонок">
+                                                                    Звонок
+                                                                </option>
+                                                                <option value="WhatsApp">
+                                                                    WhatsApp
+                                                                </option>
+                                                            </select>
+                                                        </label>
+
+                                                        <button class="btn popup__btn" type="submit">
+                                                            Оформить
+                                                        </button>
+                                                        <p class="popup__text">
+                                                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                                        </p>
+
+                                                    </fieldset>
+                                                </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal-end -->
                                     </div>
                                 </div>
                                 
@@ -859,7 +1824,7 @@
                                         <p>
                                             Читайте больше отзывов и убедитесь в нашей крутости!
                                         </p>
-                                        <a class="feedback__link" href="#">Читать больше отзывов</a>
+                                        <a class="feedback__link">Читать больше отзывов</a>
                                     </div>
                                 </div>
                             </div>
@@ -890,7 +1855,91 @@
                                 Уже 10 000+ клиентов воспользовались нашим сервисом. Стань одним из них!
                             </p>
                         </div>
-                        <a class="about-device__btn btn" href="#popup">Оформить подписку</a>
+                        <a class="about-device__btn btn popup-link" href="#popup8">
+                            Оформить подписку
+                        </a>
+                            <!-- modal-start -->
+                            <div id="popup8" class="popup" role="alert">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                    
+                                    <form class="popup__form" action="#" method="post">
+                                        <fieldset class="popup__form-container">
+
+                                            <legend class="popup__title">
+                                                Оформить подписку
+                                            </legend>
+                                            <label class="popup__pgf">
+                                                <input type="text" name="name-user" placeholder="Ваше имя">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <input type="tel" name="phone" placeholder="Номер телефона">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Девайсы</span>
+                                                <select name="devices[]">
+                                                    <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                        Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                        Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                        Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                        Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                        Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                    </option>
+                                                    <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                        Нужна консультация по выбору девайса (бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Введите промокод (если есть)</span>
+                                                <input type="text" name="promo-text" placeholder="Промокод">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Способ получения</span>
+                                                <select name="Method-obtaining[]">
+                                                    <option value="Самовывоз (Бесплатно)">
+                                                        Самовывоз (Бесплатно)
+                                                    </option>
+                                                    <option value="Доставка курьером (Бесплатно)">
+                                                        Доставка курьером (Бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Удобный способ связи</span>
+                                                <select name="way-communication[]">
+                                                    <option value="Звонок">
+                                                        Звонок
+                                                    </option>
+                                                    <option value="WhatsApp">
+                                                        WhatsApp
+                                                    </option>
+                                                </select>
+                                            </label>
+
+                                            <button class="btn popup__btn" type="submit">
+                                                Оформить
+                                            </button>
+                                            <p class="popup__text">
+                                                Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                            </p>
+
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                            </div>
+                            <!-- modal-end -->
                     </div>
                 </section>
                 <a id="link-personal" class="nav__link-personal"></a>
@@ -1248,7 +2297,91 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn benefits-row__btn" href="#popup">Выбрать самокат для тест драйва</a>
+                        <a class="btn benefits-row__btn popup-link" href="#popup9">
+                            Выбрать самокат для тест драйва
+                        </a>
+                            <!-- modal-start -->
+                            <div id="popup9" class="popup" role="alert">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <button type="button" class="popup__close close-popup" aria-label="закрыть модальное окно"></button>
+                                    
+                                    <form class="popup__form" action="#" method="post">
+                                        <fieldset class="popup__form-container">
+
+                                            <legend class="popup__title">
+                                                Оформить подписку
+                                            </legend>
+                                            <label class="popup__pgf">
+                                                <input type="text" name="name-user" placeholder="Ваше имя">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <input type="tel" name="phone" placeholder="Номер телефона">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Девайсы</span>
+                                                <select name="devices[]">
+                                                    <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
+                                                        Самокат Yamato 0809 (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
+                                                        Самокат Aovo 365M Pro (от 3300 ₽/месяц)
+                                                    </option>
+                                                    <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
+                                                        Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
+                                                        Велосипед Forward Sporting (от 2400 ₽/месяц)
+                                                    </option>
+                                                    <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
+                                                        Велосипед Forward Sporting X (от 2900 ₽/месяц)
+                                                    </option>
+                                                    <option value="Нужна консультация по выбору девайса (бесплатно)">
+                                                        Нужна консультация по выбору девайса (бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Введите промокод (если есть)</span>
+                                                <input type="text" name="promo-text" placeholder="Промокод">
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Способ получения</span>
+                                                <select name="Method-obtaining[]">
+                                                    <option value="Самовывоз (Бесплатно)">
+                                                        Самовывоз (Бесплатно)
+                                                    </option>
+                                                    <option value="Доставка курьером (Бесплатно)">
+                                                        Доставка курьером (Бесплатно)
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="popup__pgf">
+                                                <span>Удобный способ связи</span>
+                                                <select name="way-communication[]">
+                                                    <option value="Звонок">
+                                                        Звонок
+                                                    </option>
+                                                    <option value="WhatsApp">
+                                                        WhatsApp
+                                                    </option>
+                                                </select>
+                                            </label>
+
+                                            <button class="btn popup__btn" type="submit">
+                                                Оформить
+                                            </button>
+                                            <p class="popup__text">
+                                                Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="policy.html">политикой обработки персональных данных.</a>
+                                            </p>
+
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                            </div>
+                            <!-- modal-end -->
                     </div>
                 </section>
                 <a id="link-answers" class="nav__link-answers"></a>
@@ -1298,73 +2431,73 @@
                                 <div id="questions-1" class="questions-answers__info questions-answers__info--active">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как работает подписка "Мой самокат"
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Вы оформляете подписку на сайте, следуя инструкциям. После этого с вами связывается наш менеджер для подтверждения подписки и согласования деталей доставки электросамоката. В течение 48 часов после оформления подписки курьер доставляет вам электросамокат и оформляет необходимые документы. Подписка начинает действовать с момента получения самоката. Вы пользуетесь самокатом, пока он вам не надоест. Если самокат вам больше не нужен - вы можете отменить подписку, и наш курьер заберет у вас самокат.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как мне оформить подписку на "Мой самокат"?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Вы можете оформить подписку прямо у нас на сайте. Просто <a class="questions-info__text-link" href="#">перейдите по ссылке</a> и следуйте дальнейшим инструкциям.
+                                                Вы можете оформить подписку прямо у нас на сайте. Просто <a class="questions-info__text-link">перейдите по ссылке</a> и следуйте дальнейшим инструкциям.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Кто может оформить подписку?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Подписку на электросамокат могут оформить лица старше 18 лет.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Что входит в подписку?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Подписка включает в себя электросамокат, зарядное устройство и защитный замок.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Какие документы необходимы для оформления?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Чтобы оформить подписку, вам необходимо пройти регистрацию на нашем сайте. Для этого потребуются ваши личные данные, такие как ФИО, номер мобильного телефона, email и карта, которой вы будете оплачивать подписку (сразу или при получении). При непосредственном получении тренажера в акт передачи необходимо будет внести ваши паспортные данные, поэтому при встрече с курьером обязательно иметь при себе паспорт. Курьеру также необходимо будет сфотографировать ваш паспорт.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Я иностранный гражданин. Могу ли я оформить подписку?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Да, вы можете оформить подписку. Для этого потребуется ваш паспорт и документ о регистрации в России, действительный в течение следующих трех месяцев.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Должен ли я оставлять залог?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Нет, мы не требуем оставлять залог за электросамокат.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Мне нет 18 лет, могут ли за меня оформить подписку мои родители?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Оформить подписку может лицо старше 18 лет. Всю ответственность за пользование самокатом третьими лицами несет человек, оформивший подписку. Мы настоятельно не рекомендуем использовать самокат лицами, младше 18 лет, так как это транспортное средство повышенной опасности. Мы также настоятельно рекомендуем не передавать ваш самокат любым третьим лицам.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как я могу продлить подписку, если захочу пользоваться электросамокатом и дальше?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Подписка каждый месяц продлевается автоматически путем списания очередного месячного платежа с карты, на которую вы оформляли подписку. Вы можете отменить подписку в любой день до конца периода, в течение которого действует подписка, самостоятельно в личном кабинете. Подпиской можно пользоваться до окончания оплаченного периода независимо от даты отмены подписки.
                                             </p>
@@ -1375,41 +2508,41 @@
                                 <div id="questions-2" class="questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Я получаю новый электросамокат?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Оформив подписку, вы получите новый самокат или самокат, состояние которого максимально близко к новому.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Какие модели есть в наличии?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Мы предоставляем в аренду электросамокаты фирмы Yamato. Наша базовая модель – Yamato 0809. О наличии других моделей уточняйте у менеджеров нашего сервиса в чате на сайте, мессенджерах или по телефону.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как пользоваться самокатом?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                С правилами пользования электросамокатом вы можете ознакомиться по <a class="questions-info__text-link" href="#">ссылке</a>. Рекомендуем ознакомиться с Правилами Дорожного Движения по <a class="questions-info__text-link" href="#">ссылке</a>.
+                                                С правилами пользования электросамокатом вы можете ознакомиться по <a class="questions-info__text-link">ссылке</a>. Рекомендуем ознакомиться с Правилами Дорожного Движения по <a class="questions-info__text-link">ссылке</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Должен ли я оставлять самокат на специально предусмотренных для этого станциях?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Нет, в этом нет никакой необходимости. Это ваш самокат, и вы можете оставлять его где угодно, позаботившись о необходимых мерах безопасности и убедившись, что он не мешает движению пешеходов и автомобилистов. Между тем, мы рекомендуем парковать самокат на велостоянках и обязательно использовать замок, который входит в стоимость подписки. В целях безопасности не оставляйте самокат без присмотра на длительное время особенно в ночное время суток.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Что делать если самокат украли?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Мы настоятельно просим относиться к электросамокату, как к вашему собственному, и принимать все необходимые меры безопасности. В случае кражи самоката мы взимаем с вас его стоимость, указанную в акте передачи, и рекомендуем вам обратиться в полицию.
                                             </p>
@@ -1420,33 +2553,33 @@
                                 <div id="questions-3" class="questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Сколько стоит доставка самоката?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 В пределах МКАД и до 30 км от МКАД - бесплатно. Стоимость доставки от 30 до 40 км от МКАД составляет 400 рублей. Выезд курьера для возврата и замены электросамоката в пределах МКАД и до 30 км от МКАД входит в стоимость подписки. Выезд курьера от 30 км до 40 км от МКАД для возврата и замены электросамоката составляет 400 рублей.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Могу ли я забрать и вернуть самокат сам?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Да, вы можете забрать и вернуть самокат самостоятельно в наш офис по адресу 1-й Кожевнический пер., д.6, стр. 6, заранее согласовав время с оператором.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Я живу за МКАД, могу ли я использовать ваш сервис?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Доставка осуществляется в пределах до 40 км за МКАД
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как быстро мне доставляет самокат?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 После оформления подписки вы получите ваш самокат в течение 48 часов.
                                             </p>
@@ -1457,33 +2590,33 @@
                                 <div id="questions-4" class="questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 У меня закончилась подписка, как быстро я должен вернуть самокат?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 По истечении подписки вы должны вернуть самокат в течение 48 часов. Для этого мы связываемся с вами, чтобы согласовать время и место забора самоката. По прошествии 48 часов, если Вы не возвращаете самокат, начинают начисляться пени в размере 500 руб. в сутки за каждый день просрочки возврата самоката
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Могу ли я вернуть самокат раньше, до окончания подписки?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Вы можете вернуть самокат в любой день до окончания подписки. Однако сумма за неиспользованные дни оплаченной подписки не возвращается.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как я могу отменить подписку?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Отменить подписку можно самостоятельно в личном кабинете. Вы можете отменить подписку в любой день до ее окончания. При этом самокатом можно пользоваться до окончания оплаченного периода независимо от даты отмены подписки.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как проходит процедура возврата самоката?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 По прекращении срока подписки с вами свяжется наш оператор для согласования места и времени забора самоката. После этого к вам приедет наш курьер, который оценит состояние самоката, сделает его фотографии или видео и занесет необходимую информацию о самокате в акт приема. Вы также можете вернуть самокат самостоятельно в наш офис.
                                             </p>
@@ -1494,35 +2627,35 @@
                                 <div id="questions-5" class="questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 У меня сломался самокат, что делать?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 В случае поломки самоката немедленно прекратите его использование и свяжитесь с нами для согласования времени и места замены самоката на новый.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Взимаются ли с меня штрафы в случае поломки самоката?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Мы берем на себя полностью заботы по обслуживанию и ремонту поломок самоката, связанных с заводским браком или произошедших при правильном и аккуратном его использовании. Просто напишите в нашу службу поддержки, и курьер оперативно доставит вам новый самокат взамен старого. Поломки в результате неправильного и неаккуратного использования электросамоката оплачиваются пропорционально нанесенному ущербу за счет пользователя. К таким поломкам не относится нормальный износ самоката. Более подробно с размерами штрафов можно ознакомиться в <a class="questions-info__text-link" href="#">офферте</a>. Инструкция по использованию электросамоката будет доступна в личном кабинете после оформления подписки. Вы также получите краткую инструкцию вместе с самокатом, чтобы как можно быстрее начать его использование.
+                                                Мы берем на себя полностью заботы по обслуживанию и ремонту поломок самоката, связанных с заводским браком или произошедших при правильном и аккуратном его использовании. Просто напишите в нашу службу поддержки, и курьер оперативно доставит вам новый самокат взамен старого. Поломки в результате неправильного и неаккуратного использования электросамоката оплачиваются пропорционально нанесенному ущербу за счет пользователя. К таким поломкам не относится нормальный износ самоката. Более подробно с размерами штрафов можно ознакомиться в <a class="questions-info__text-link">офферте</a>. Инструкция по использованию электросамоката будет доступна в личном кабинете после оформления подписки. Вы также получите краткую инструкцию вместе с самокатом, чтобы как можно быстрее начать его использование.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Предоставляете ли Вы страховку от поломок, кражи самоката или нанесения ущерба самокату третьим лицам?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Для самоката и велосипеда доступно оформление подписки с тарифом «Защита». Данный тариф покрывает твою материальную ответственность при повреждениях и поломках, полученных в ходе использования девайса и сокращает размер твоей материальной ответственности при краже девайса третьими лицами. Более подробно с этим вопросом можно ознакомится в оферте.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Если самокат вышел из строя, как устанавливается, есть ли в этом вина пользователя?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Для определения причин возникновения видимых повреждений и выявления скрытых повреждений производится техническая экспертиза самоката. Более подробно с этим вопросом можно ознакомится в <a class="questions-info__text-link" href="#">офферте</a>, представленной на сайте.
+                                                Для определения причин возникновения видимых повреждений и выявления скрытых повреждений производится техническая экспертиза самоката. Более подробно с этим вопросом можно ознакомится в <a class="questions-info__text-link">офферте</a>, представленной на сайте.
                                             </p>
                                         </li>
                                     </ul>
@@ -1531,43 +2664,43 @@
                                 <div id="questions-6" class="questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 В каких городах работает ваш сервис?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Мы предоставляем свои услуги только на территории Москвы, Казани, Санкт-Петербурга и Краснодара. Однако, если вы хотите, чтобы наш сервис появился в вашем городе, дайте нам знать, написав на электронную почту <a class="questions-info__text-link" href="#">info@moysamokat.ru</a>, указав тему письма «Хочу «Мой самокат» в городе N».
+                                                Мы предоставляем свои услуги только на территории Москвы, Казани, Санкт-Петербурга и Краснодара. Однако, если вы хотите, чтобы наш сервис появился в вашем городе, дайте нам знать, написав на электронную почту <a class="questions-info__text-link">info@moysamokat.ru</a>, указав тему письма «Хочу «Мой самокат» в городе N».
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Как происходит оплата?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Оплатить подписку можно сразу или при получении самоката по карте из личного кабинета. Ссылка на оплату будет доступна после прохождения регистрации на сайте.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Правила оплаты и безопасности, конфиденциальность сервиса "Мой самокат"?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Со всей подробной информацией вы можете ознакомиться <a class="questions-info__text-link" href="#">здесь</a>.
+                                                Со всей подробной информацией вы можете ознакомиться <a class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Я курьер. Могу ли я воспользоваться вашей подпиской?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Для курьеров у нас действует специальная программа. Ознакомиться со всеми условиями можно <a class="questions-info__text-link" href="#">здесь</a>.
+                                                Для курьеров у нас действует специальная программа. Ознакомиться со всеми условиями можно <a class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading">
                                                 Я юридическое лицо. Могу ли я воспользоваться вашей подпиской?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Для бизнеса у нас действует специальная программа. Ознакомиться со всеми условиями можно <a class="questions-info__text-link" href="#">здесь</a>.
+                                                Для бизнеса у нас действует специальная программа. Ознакомиться со всеми условиями можно <a class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                     </ul>
@@ -1585,8 +2718,8 @@
                                 ДРУГИЕ ДЕВАЙСЫ!
                             </span>
                         </h2>
-                        <div class="other-devices__body">
-                            <div class="other-devices__column">
+                        <ul class="other-devices__body" aria-label="НЕ ХОЧЕШЬ САМОКАТ? У НАС ЕСТЬ И ДРУГИЕ ДЕВАЙСЫ!">
+                            <li class="other-devices__column">
                                 <div class="other-devices__item">
                                     <figure class="other-devices__images">
                                         <img src="images/devices/devices-1.webp" alt="На фотографии велосипед">
@@ -1594,13 +2727,13 @@
                                     <h4 class="other-devices__heading">
                                         Велосипед
                                     </h4>
-                                    <a class="other-devices__btn btn" href="moyvelik.html">
+                                    <a class="other-devices__btn btn" aria-label="Переход на страницу с велосипедами" href="moyvelik.html">
                                         Выбрать
                                     </a>
                                 </div>
-                            </div>
+                            </li>
     
-                            <div class="other-devices__column">
+                            <li class="other-devices__column">
                                 <div class="other-devices__item">
                                     <figure class="other-devices__images">
                                         <img src="images/devices/devices-2.png" alt="На фотографии игровая консоль">
@@ -1608,13 +2741,13 @@
                                     <h4 class="other-devices__heading">
                                         Консоль
                                     </h4>
-                                    <a class="other-devices__btn btn" href="moyaconsol.html">
+                                    <a class="other-devices__btn btn" aria-label="Переход на страницу с консолями" href="moyaconsol.html">
                                         Выбрать
                                     </a>
                                 </div>
-                            </div>
+                            </li>
     
-                            <div class="other-devices__column">
+                            <li class="other-devices__column">
                                 <div class="other-devices__item">
                                     <figure class="other-devices__images">
                                         <img src="images/devices/devices-3.webp" alt="На фотографии беговая дорожка">
@@ -1622,12 +2755,12 @@
                                     <h4 class="other-devices__heading">
                                         Тренажёр
                                     </h4>
-                                    <a class="other-devices__btn btn" href="moytrenazher.html">
+                                    <a class="other-devices__btn btn" aria-label="Переход на страницу с тренажёрами" href="moytrenazher.html">
                                         Выбрать
                                     </a>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </div>
@@ -1654,7 +2787,7 @@
                                 <p class="footer__feedback-text">
                                 Общие вопросы
                                 </p>
-                                <a class="footer__feedback-link" href="mailto:info@moydevice.ru">
+                                <a class="footer__feedback-link" aria-label="Написать нам на электронную почту по общим вопросам" href="mailto:info@moydevice.ru">
                                 info@moydevice.ru
                                 </a>
                             </li>
@@ -1662,7 +2795,7 @@
                                 <p class="footer__feedback-text">
                                 Сотрудничество и маркетинг
                                 </p>
-                                <a class="footer__feedback-link" href="mailto:marketing@moydevice.ru">
+                                <a class="footer__feedback-link" aria-label="Написать нам на электронную почту по вопросам Сотрудничество и маркетинг" href="mailto:marketing@moydevice.ru">
                                 marketing@moydevice.ru
                                 </a>
                             </li>
@@ -1670,7 +2803,7 @@
                                 <p class="footer__feedback-text">
                                 Для юридических лиц
                                 </p>
-                                <a class="footer__feedback-link" href="mailto:commercial@moydevice.ru">
+                                <a class="footer__feedback-link" aria-label="Написать нам на электронную почту Для юридических лиц" href="mailto:commercial@moydevice.ru">
                                 commercial@moydevice.ru
                                 </a>
                             </li>
@@ -1678,7 +2811,7 @@
                                 <p class="footer__feedback-text">
                                 Франчайзинг
                                 </p>
-                                <a class="footer__feedback-link" href="mailto:franchising@moydevice.ru">
+                                <a class="footer__feedback-link" aria-label="Написать нам на электронную почту по Франчайзингу" href="mailto:franchising@moydevice.ru">
                                 franchising@moydevice.ru
                                 </a>
                             </li>
@@ -1686,7 +2819,7 @@
                                 <p class="footer__feedback-text">
                                 Работа у нас
                                 </p>
-                                <a class="footer__feedback-link" href="mailto:hr@moydevice.ru">
+                                <a class="footer__feedback-link" aria-label="Написать нам на электронную почту по поводу вакансии" href="mailto:hr@moydevice.ru">
                                 hr@moydevice.ru
                                 </a>
                             </li>
@@ -1695,17 +2828,18 @@
                 </div>
                 <div class="footer__bottom">
                     <div class="footer__column-privacy">
-                        <a href="#" class="footer__privacy-link">
+                        <a class="footer__privacy-link">
                             Оферта
                         </a>
-                        <a href="#" class="footer__privacy-link">
+                        <a href="policy.html" class="footer__privacy-link">
                             Политика конфиденциальности
                         </a>
                     </div>
-                    <div class="footer__column-social">
-                        <a href="https://web.whatsapp.com/" class="footer__social-link">
+                    <ul class="footer__column-social " aria-label="Наши социальные сети">
+                        <li>
+                            <a href="https://web.whatsapp.com/" aria-label="Перейти на сайт Ватсап" class="footer__social-link">
     
-                            
+                          
                                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="34" viewBox="0 0 33 34" fill="none">
                                     <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd" d="M20.5346 19.9335C20.3644 20.4254 19.5477 20.8738 19.1548 20.9343C18.8031 20.9885 18.3576 21.0108 17.8678 20.8515C17.5708 20.7537 17.1902 20.6241 16.7035 20.4073C14.6534 19.4957 13.3138 17.3697 13.2117 17.2294C13.1096 17.0892 12.3774 16.0883 12.3774 15.0523C12.3774 14.0164 12.9054 13.5064 13.0931 13.296C13.2798 13.0857 13.5015 13.0325 13.6376 13.0325C13.7737 13.0325 13.9098 13.0336 14.0295 13.04C14.1553 13.0464 14.3234 12.9911 14.4894 13.4012C14.6596 13.823 15.0679 14.859 15.1195 14.9642C15.17 15.0693 15.2041 15.1926 15.136 15.3328C15.0679 15.4731 15.0339 15.5613 14.9318 15.6845C14.8297 15.8067 14.7173 15.9587 14.6255 16.0532C14.5234 16.1573 14.4162 16.2721 14.5358 16.4825C14.6554 16.6928 15.0648 17.3824 15.6722 17.9402C16.4529 18.6574 17.1119 18.8795 17.3161 18.9857C17.5202 19.0909 17.6399 19.0728 17.7585 18.9326C17.8781 18.7923 18.27 18.3185 18.4061 18.107C18.5422 17.8967 18.6783 17.9317 18.866 18.0018C19.0527 18.072 20.0581 18.5809 20.2623 18.6872C20.4665 18.7923 20.6026 18.8444 20.6542 18.9326C20.7047 19.0208 20.7047 19.4415 20.5346 19.9335ZM16.5364 9.92261C12.7868 9.92261 9.73638 13.0634 9.73535 16.9234C9.73535 18.2462 10.0942 19.535 10.7749 20.6496L10.9368 20.9142L10.2499 23.4981L12.8229 22.8033L13.0704 22.9542C14.114 23.5927 15.3103 23.9306 16.5302 23.9306H16.5333C20.2799 23.9306 23.3293 20.7898 23.3313 16.9287C23.3313 15.0577 22.626 13.2992 21.3421 11.9754C20.0581 10.6525 18.3514 9.92261 16.5364 9.92261Z" fill="#5D5D5D">
                                     </path>
@@ -1713,24 +2847,29 @@
                                     </path>
                                 </svg> 
     
-                        </a>
-                        <a href="https://www.instagram.com/" class="footer__social-link">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" aria-label="Перейти на сайт Инстаграм" class="footer__social-link">
     
                             
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                                     <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd" d="M0 17C0 26.3874 7.6126 34 17 34C26.3874 34 34 26.3874 34 17C34 7.6126 26.3874 0 17 0C7.6126 0 0 7.6126 0 17ZM21.6888 7.55487C20.4648 7.49707 20.0976 7.48687 17.0002 7.48687C13.9028 7.48687 13.5356 7.49707 12.3116 7.55487C11.1794 7.60927 10.564 7.79627 10.156 7.95607C9.61538 8.16687 9.22778 8.41847 8.82318 8.82307C8.41858 9.22767 8.16698 9.61528 7.95618 10.1559C7.79638 10.5639 7.60598 11.1793 7.55498 12.3115C7.49718 13.5355 7.48698 13.9027 7.48698 17.0001C7.48698 20.0975 7.50058 20.4647 7.55498 21.6887C7.60938 22.8209 7.79638 23.4363 7.95618 23.8443C8.16698 24.3849 8.41858 24.7725 8.82318 25.1771C9.22778 25.5817 9.61538 25.8333 10.156 26.0441C10.564 26.2039 11.1794 26.3943 12.3116 26.4453C13.5356 26.5031 13.9028 26.5133 17.0002 26.5133C20.0976 26.5133 20.4648 26.4997 21.6888 26.4453C22.821 26.3909 23.4364 26.2039 23.8444 26.0441C24.385 25.8333 24.7726 25.5817 25.1772 25.1771C25.5818 24.7725 25.8334 24.3849 26.0442 23.8443C26.204 23.4363 26.3944 22.8209 26.4454 21.6887C26.5032 20.4647 26.5134 20.0975 26.5134 17.0001C26.5134 13.9027 26.4998 13.5355 26.4454 12.3115C26.391 11.1793 26.204 10.5639 26.0442 10.1559C25.8334 9.61528 25.5818 9.22767 25.1772 8.82307C24.7726 8.41847 24.385 8.16687 23.8444 7.95607C23.4364 7.79627 22.821 7.60587 21.6888 7.55487ZM12.2164 5.46727C13.454 5.40947 13.8484 5.39587 17.0002 5.39587C20.152 5.39587 20.5464 5.40947 21.7806 5.46387C23.0182 5.52167 23.8614 5.71887 24.5992 6.00447C25.3642 6.30367 26.0102 6.69807 26.6562 7.34407C27.3022 7.98667 27.7 8.63607 27.9958 9.39427C28.2848 10.1355 28.4786 10.9787 28.5364 12.2129C28.5942 13.4505 28.6078 13.8449 28.6078 16.9967C28.6078 20.1485 28.5942 20.5429 28.5364 21.7805C28.4786 23.0181 28.2814 23.8613 27.9958 24.5991C27.6966 25.3641 27.3022 26.0101 26.6562 26.6561C26.0136 27.3021 25.3642 27.6999 24.606 27.9957C23.8648 28.2847 23.0216 28.4785 21.7874 28.5363C20.5498 28.5941 20.1554 28.6077 17.0036 28.6077C13.8518 28.6077 13.4574 28.5941 12.2198 28.5363C10.9822 28.4785 10.139 28.2813 9.40118 27.9957C8.63618 27.6965 7.99018 27.3021 7.34418 26.6561C6.69818 26.0135 6.30038 25.3641 6.00458 24.6059C5.71558 23.8647 5.52178 23.0215 5.46398 21.7873C5.40618 20.5497 5.39258 20.1553 5.39258 17.0035C5.39258 13.8517 5.40618 13.4573 5.46398 12.2197C5.52178 10.9821 5.71898 10.1389 6.00458 9.40107C6.30378 8.63608 6.69818 7.99007 7.34418 7.34407C7.98678 6.69807 8.63618 6.30027 9.39778 6.00787C10.139 5.71887 10.9822 5.52507 12.2164 5.46727ZM17.0005 11.0399C13.7093 11.0399 11.0403 13.7089 11.0403 17.0001C11.0403 20.2913 13.7093 22.9603 17.0005 22.9603C20.2917 22.9603 22.9607 20.2913 22.9607 17.0001C22.9607 13.7089 20.2917 11.0399 17.0005 11.0399ZM17.0005 20.8693C14.8653 20.8693 13.1313 19.1387 13.1313 17.0001C13.1313 14.8615 14.8653 13.1309 17.0005 13.1309C19.1357 13.1309 20.8697 14.8615 20.8697 17.0001C20.8697 19.1387 19.1357 20.8693 17.0005 20.8693ZM24.5894 10.8052C24.5894 11.5751 23.9653 12.1992 23.1954 12.1992C22.4255 12.1992 21.8014 11.5751 21.8014 10.8052C21.8014 10.0353 22.4255 9.41119 23.1954 9.41119C23.9653 9.41119 24.5894 10.0353 24.5894 10.8052Z" fill="#5D5D5D"></path>
                                 </svg> 
     
-                        </a>
-                        <a href="https://web.telegram.org/" class="footer__social-link">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://web.telegram.org/" aria-label="Перейти на сайт Телеграм" class="footer__social-link">
     
                             
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="34" viewBox="0 0 33 34" fill="none">
-                                         <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd" d="M33 17C33 26.3888 25.6127 34 16.5 34C7.3873 34 0 26.3888 0 17C0 7.61116 7.3873 0 16.5 0C25.6127 0 33 7.61116 33 17ZM23.4589 10.3118L7.55012 16.6316C6.45974 17.0708 6.47899 17.6927 7.36312 17.9817L11.4359 19.2907L20.8835 13.1622C21.3221 12.8618 21.7291 13.0318 21.3964 13.3336L13.7514 20.4495L13.4585 24.7746C13.8847 24.7746 14.0704 24.5833 14.2904 24.3567L16.28 22.3818L20.405 25.5141C21.1571 25.9533 21.6947 25.7266 21.8955 24.7944L24.6042 11.6463L24.6029 11.6478C24.8421 10.4974 24.1972 10.037 23.4589 10.3118Z" fill="#5D5D5D"></path>
-                                    </svg>
-    
-                        </a>
-                    </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="34" viewBox="0 0 33 34" fill="none">
+                                     <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd" d="M33 17C33 26.3888 25.6127 34 16.5 34C7.3873 34 0 26.3888 0 17C0 7.61116 7.3873 0 16.5 0C25.6127 0 33 7.61116 33 17ZM23.4589 10.3118L7.55012 16.6316C6.45974 17.0708 6.47899 17.6927 7.36312 17.9817L11.4359 19.2907L20.8835 13.1622C21.3221 12.8618 21.7291 13.0318 21.3964 13.3336L13.7514 20.4495L13.4585 24.7746C13.8847 24.7746 14.0704 24.5833 14.2904 24.3567L16.28 22.3818L20.405 25.5141C21.1571 25.9533 21.6947 25.7266 21.8955 24.7944L24.6042 11.6463L24.6029 11.6478C24.8421 10.4974 24.1972 10.037 23.4589 10.3118Z" fill="#5D5D5D"></path>
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             </div>
@@ -1739,473 +2878,7 @@
     </div>
 
 
-
-<!-- попап выбор модели девайса начало -->
-
-    <div id="popup" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body popup__body-device">
-            <div class="popup__content">
-                <a class="popup__close" href="#header"></a>
-                
-                <form class="popup__form" action="#" method="post">
-                    <fieldset class="popup__form-container">
-
-                        <legend class="popup__title">
-                            Оформить подписку
-                        </legend>
-                        <label class="popup__pgf">
-                            <input type="text" name="name-user" placeholder="Ваше имя">
-                        </label>
-                        <label class="popup__pgf">
-                            <input type="tel" name="phone" placeholder="Номер телефона">
-                        </label>
-                        <label class="popup__pgf">
-                            <span>Девайсы</span>
-                            <select name="devices[]">
-                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
-                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
-                                </option>
-                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
-                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
-                                </option>
-                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
-                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
-                                </option>
-                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
-                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
-                                </option>
-                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
-                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
-                                </option>
-                                <option value="Нужна консультация по выбору девайса (бесплатно)">
-                                    Нужна консультация по выбору девайса (бесплатно)
-                                </option>
-                            </select>
-                        </label>
-                        <label class="popup__pgf">
-                            <span for="promo">Введите промокод (если есть)</span>
-                            <input type="text" name="promo-text" id="promo" placeholder="Промокод">
-                        </label>
-                        <label class="popup__pgf">
-                            <span>Способ получения</span>
-                            <select name="Method-obtaining[]">
-                                <option value="Самовывоз (Бесплатно)">
-                                    Самовывоз (Бесплатно)
-                                </option>
-                                <option value="Доставка курьером (Бесплатно)">
-                                    Доставка курьером (Бесплатно)
-                                </option>
-                            </select>
-                        </label>
-                        <label class="popup__pgf">
-                            <span>Удобный способ связи</span>
-                            <select name="way-communication[]">
-                                <option value="Звонок">
-                                    Звонок
-                                </option>
-                                <option value="WhatsApp">
-                                    WhatsApp
-                                </option>
-                            </select>
-                        </label>
-
-                        <button class="btn popup__btn" type="submit">
-                            Оформить
-                        </button>
-                        <p class="popup__text">
-                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="#">политикой обработки персональных данных.</a>
-                        </p>
-
-                    </fieldset>
-                </form>
-                
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-<!-- попап с Характеристиками девайса начало -->
-
-    <section id="popup-yamato0809" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body popup__body-specifications">
-            <div class="popup__content popup-specifications__content">
-                <a class="popup__close" href="#header"></a>
-                <h4 class="popup__specifications-title">
-                    Характеристики <span class="span-yellow">Yamato 0809</span>
-                </h4>
-                <div class="popup__specifications-container">
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Вес: <span>11 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Габариты (ДхШхВ): <span>109х43х103 см</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Высота руля: <span>90 см от дэки до ручек (нерегулируемая)</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Размер колес: <span>8 дюймов</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Колеса: <span>заднее безвоздушное, переднее надувное</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Тормоз: <span>ручной электрический</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Максимальная нагрузка: <span>120 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Максимальная скорость: <span>25 км/ч</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Пробег на одном заряде: <span>до 15 км</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="popup-aovo365MPro" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body">
-            <div class="popup__content popup-specifications__content">
-                <a class="popup__close" href="#header"></a>
-                <h4 class="popup__specifications-title">
-                    Характеристики <span class="span-yellow">Aovo 365M Pro</span>
-                </h4>
-                <div class="popup__specifications-container">
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Вес: <span>12.5 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Габариты (ДхШхВ): <span>107х43х110 см</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Высота руля: <span>95 см от дэки до ручек (нерегулируемая)</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Размер колес: <span>8.5 дюймов</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Колеса: <span>безвоздушные</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Тормоз: <span>ручной дисковой</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Максимальная нагрузка: <span>120 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Максимальная скорость: <span>25 км/ч</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Пробег на одном заряде: <span>до 25 км</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="popup-yamato0809Pro" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body">
-            <div class="popup__content popup-specifications__content">
-                <a class="popup__close" href="#header"></a>
-                <h4 class="popup__specifications-title">
-                    Характеристики <span class="span-yellow">Yamato 0809 Pro</span>
-                </h4>
-                <div class="popup__specifications-container">
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Вес: <span>12 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Габариты (ДхШхВ): <span>109х43х103 см</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Высота руля: <span>90 см от дэки до ручек (нерегулируемая)</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Размер колес: <span>8 дюймов</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Колеса: <span>заднее безвоздушное, переднее надувное</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Тормоз: <span>ручной электрический</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Максимальная нагрузка: <span>120 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Максимальная скорость: <span>25 км/ч</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Пробег на одном заряде: <span>до 35 км</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Защита от влаги и пыли: <span>IP-65 (усиленная влаго- и пылезащита, можно ездить в дождь)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="popup-forwardsporting" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body">
-            <div class="popup__content popup-specifications__content">
-                <a class="popup__close" href="#header"></a>
-                <h4 class="popup__specifications-title">
-                    Характеристики <span class="span-yellow">Forward SPORTING</span>
-                </h4>
-                <div class="popup__specifications-container">
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Вес: <span>16 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Материал рамы: <span>сталь</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Размер колес: <span>29 дюймов</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Тип тормозов: <span>дисковые</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Количество скоростей: <span>21</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Возраст: <span>для взрослых</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Возможно оформить с тарифом "Защита"
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="popup-forwardsportingx" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body">
-            <div class="popup__content popup-specifications__content">
-                <a class="popup__close" href="#header"></a>
-                <h4 class="popup__specifications-title">
-                    Характеристики <span class="span-yellow">Forward SPORTING X</span>
-                </h4>
-                <div class="popup__specifications-container">
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Вес: <span>16 кг</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Материал рамы: <span>сталь</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Размер колес: <span>29 дюймов</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Тип: <span>горный</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Тип тормозов: <span>дисковые</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Количество скоростей: <span>28</span>
-                        </li>
-                        <li class="popup-specifications__item">
-                            Возраст: <span>для взрослых</span>
-                        </li>
-                    </ul>
-                    <ul class="popup-specifications__list">
-                        <li class="popup-specifications__item">
-                            Возможно оформить с тарифом "Защита"
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- дополнительные попапы пригласить друга/подарить сертификат начало -->
-
-    <section id="popup-friend" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body">
-            <div class="popup__content popup-friend__content">
-                <a class="popup__close" href="#header"></a>
-                    <div class="popup__images">
-                        <img src="images/popup/popup-friend.webp" alt="">
-                    </div>
-                    <h4 class="popup-friend__title">
-                        Приводи друзей
-                    </h4>
-                    <p class="popup-friend__text">
-                        и получай 5 бесплатных дней к своей подписке и подписке друга. Количество друзей не ограничено. Назови менеджеру ФИО друга, оформившего подписку, и мы добавим бонусы.
-                    </p>
-                    <a href="#" class="btn popup__btn">
-                        Написать в Telegram
-                    </a>
-                    <a href="#" class="btn popup__btn">
-                        Написать в WhatsApp
-                    </a>
-                </div>
-            </div>
-    </section>
-
-    <div id="popup-certificate" class="popup">
-        <a href="#header" class="popup__area"></a>
-        <div class="popup__body popup__body-certificate">
-            <div class="popup__content popup-certificate__content">
-                <a class="popup__close" href="#header"></a>
-
-                <div class="popup__images">
-                    <img src="images/popup/popup-certificate.webp" alt="">
-                </div>
-                
-                <form class="popup__form popup-certificate__form" action="#" method="post">
-                    <fieldset class="popup__form-container">
-
-                        <legend class="popup__title">
-                            Оформить подписку
-                        </legend>
-                        <p class="popup__pgf">
-                            <span>Выберите срок аренды</span>
-                            <select name="Method-obtaining[]">
-                                <option value="Самовывоз (Бесплатно)">
-                                    Сертификат на 1 месяц — 3 900 ₽
-                                </option>
-                                <option value="Доставка курьером (Бесплатно)">
-                                    Сертификат на 2 месяца — 7 000 ₽
-                                </option>
-                            </select>
-                        </p>
-                        <p class="popup__pgf">
-                            <input type="text" name="name-user" placeholder="Ваше имя">
-                        </p>
-                        <p class="popup__pgf">
-                            <input type="tel" name="phone" placeholder="Номер телефона">
-                        </p>
-                        <p class="popup__pgf">
-                            <span>Девайсы</span>
-                            <select name="devices[]">
-                                <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">
-                                    Самокат Yamato 0809 (от 2400 ₽/месяц)
-                                </option>
-                                <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">
-                                    Самокат Aovo 365M Pro (от 3300 ₽/месяц)
-                                </option>
-                                <option value="Самокат Yamato 0809 Pro (от 3500 ₽/месяц)">
-                                    Самокат Yamato 0809 Pro (от 3500 ₽/месяц)
-                                </option>
-                                <option value="Велосипед Forward Sporting (от 2400 ₽/месяц)">
-                                    Велосипед Forward Sporting (от 2400 ₽/месяц)
-                                </option>
-                                <option value="Велосипед Forward Sporting X (от 2900 ₽/месяц)">
-                                    Велосипед Forward Sporting X (от 2900 ₽/месяц)
-                                </option>
-                                <option value="Нужна консультация по выбору девайса (бесплатно)">
-                                    Нужна консультация по выбору девайса (бесплатно)
-                                </option>
-                            </select>
-                        </p>
-                        <p class="popup__pgf">
-                            <label for="promos">Введите промокод (если есть)</label>
-                            <input type="text" name="promo-text" id="promos" placeholder="Промокод">
-                        </p>
-                        <p class="popup__pgf">
-                            <span>Способ получения</span>
-                            <select name="Method-obtaining[]">
-                                <option value="Самовывоз (Бесплатно)">
-                                    Самовывоз (Бесплатно)
-                                </option>
-                                <option value="Доставка курьером (Бесплатно)">
-                                    Доставка курьером (Бесплатно)
-                                </option>
-                            </select>
-                        </p>
-                        <p class="popup__pgf">
-                            <span>Удобный способ связи</span>
-                            <select name="way-communication[]">
-                                <option value="Звонок">
-                                    Звонок
-                                </option>
-                                <option value="WhatsApp">
-                                    WhatsApp
-                                </option>
-                            </select>
-                        </p>
-
-                        <button class="btn popup__btn" type="submit">
-                            Оформить
-                        </button>
-                        <p class="popup__text">
-                            Нажимая кнопку "Оформить", вы соглашаетесь с <a class="popup__link" href="#">политикой обработки персональных данных.</a>
-                        </p>
-
-                    </fieldset>
-                </form>
-                
-            </div>
-        </div>
-    </div>
-
-   
-
-
-
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
