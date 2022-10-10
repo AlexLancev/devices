@@ -113,7 +113,9 @@ a:hover {
 }
 
 button {
+    padding: 0;
     border: 0;
+    background-color: transparent;
 }
 
 .btn {
@@ -285,8 +287,12 @@ button {
 }
 
 .header__subtitle {
-    font-size: 22px;
+    font-size: 18px;
     color: #ffffff;
+}
+
+.hidden {
+    display: none;
 }
 
 .header__btn {
@@ -326,6 +332,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 2px;
+    transition: 0.3s;
 }
 
 .header__burger::before,
@@ -338,6 +345,7 @@ button {
     width: 25px;
     height: 2px;
     background-color: #707070;
+    transition: 0.3s;
 }
 
 .header__burger::before {
@@ -353,7 +361,6 @@ button {
     left: 8px;
     transform: rotate(45deg);
     background-color: #707070;
-    transition: 0.3s;
 }
 
 .header__burger.active:hover:before {
@@ -366,7 +373,6 @@ button {
     left: 8px;
     transform: rotate(-45deg);
     background-color: #707070;
-    transition: 0.3s;
 }
 
 .header__burger.active:hover:after {
@@ -428,6 +434,7 @@ button {
     visibility: visible;
     margin: auto;
 }
+
 
 /* menu-stop */
 
@@ -535,6 +542,7 @@ button {
 }
 
 .subscription-works__title {
+    font-size: 40px;
     text-align: center;
     margin-bottom: 70px;
 }
@@ -659,7 +667,7 @@ button {
 .benefits-row__box-images img {
     display: block;
     object-fit: contain;
-    max-width: 300px;
+    max-width: 280px;
     height: 85px;
 }
 
@@ -695,14 +703,12 @@ button {
     color: #ffffff;
 }
 
-
-
-
 .choose-model {
     margin-bottom: 70px;
 }
 
 .choose-model__title {
+    font-size: 40px;
     text-align: center;
     margin-bottom: 70px;
 }
@@ -712,6 +718,10 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
+}
+
+.device-body {
+    margin-bottom: 30px;
 }
 
 .choose-model__column {
@@ -1034,6 +1044,7 @@ span.subscription-cooler__price {
 }
 
 .feedback__title {
+    font-size: 40px;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -1258,6 +1269,7 @@ span.subscription-cooler__price {
 }
 
 .delivery-subscription__title {
+    font-size: 40px;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -1375,26 +1387,28 @@ span.subscription-cooler__price {
 .questions-answers__link {
     color: #929292;
     font-size: 18px;
-    padding-bottom: 21px;
-    margin-bottom: -21px;
     border-bottom: 2px solid transparent;
     text-align: center;
+    transition: 0.3s;
 }
 
-.questions-answers__link:hover {
+.questions-answers__link:hover,
+.questions-answers__link:focus {
     color: #000000;
 }
 
-.questions-answers__link--active {
+.activ {
     color: #000000;
     border-bottom: 2px solid #f8e802;
 }
 
 
 .questions-info__text {
-    padding-top: 20px;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
 }
+
 
 .questions-info__item {
     border-top: 1px solid #e7e7e7;
@@ -1448,16 +1462,6 @@ span.subscription-cooler__price {
     background-color: rgb(226, 0, 0);
 }
 
-.questions-answers__info {
-    visibility: hidden;
-    height: 0;
-}
-
-.questions-answers__info--active {
-    visibility: visible;
-    height: auto;
-}
-
 .questions-info__text-link {
     color: #ff8562;
     transition: 0.3s;
@@ -1475,6 +1479,7 @@ span.subscription-cooler__price {
 }
 
 .other-devices__title {
+    font-size: 40px;
     text-align: center;
     margin-bottom: 70px;
 }
@@ -3464,13 +3469,6 @@ body.lock {
         flex-wrap: wrap;
     }
 
-    .questions-answers__link--active {
-        border-bottom: none;
-    }
-
-    .questions-answers__link {
-        border-bottom: none;
-    }
 }
 
 
@@ -3746,6 +3744,7 @@ body.lock {
     .why-rent__title,
     .clients-couriers__title,
     .couriers-model__title {
+        font-size: 30px;
         margin-bottom: 40px;
     }
 
@@ -4416,6 +4415,7 @@ body.lock {
     .clients-couriers__title,
     .couriers-model__title,
     .couriers-model__subtitle {
+        font-size: 25px;
         margin-bottom: 25px;
     }
 
