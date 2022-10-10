@@ -15,10 +15,10 @@
     <div class="wrapper">
 
         <header class="header-device" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background/moyvelik-bg.jpg);">
-            <button class="header__burger">
+            <button class="header__burger" aria-label="Меню открыть закрыть">
                 <span></span>
             </button>
-            <nav class="header__nav nav">
+            <nav class="header__nav nav" aria-label="Меню сайта">
                 <ul class="nav__list-device">
     
                     <li class="nav__item">
@@ -55,12 +55,12 @@
                     <h1 class="header__title">
                         АРЕНДУЙ ВЕЛОСИПЕД БЕЗ ПРОБЛЕМ! НЕ ПОДХОДИТ, ЗАБЕРЕМ БЕЗ ВОПРОСОВ.
                     </h1>
-                    <p class="header__subtitle">
+                    <h2 class="header__subtitle">
                         Оформи аренду от <span>2 400 ₽</span> в месяц и получи велосипед.
-                    </p>
-                    <p class="header__subtitle">
+                    </h2>
+                    <h2 class="header__subtitle">
                         <span>Доставим бесплатно</span> до двери. Без залогов.
-                    </p>
+                    </h2>
                         <a class="btn header__btn-device" href="#bike-subscription">Получить велосипед</a>
                 </div>
             </div>
@@ -101,9 +101,9 @@
                                     <figure class="how-works__images">
                                         <img src="images/device/moyvelik/how-works/how-works_1.webp" alt="">
                                     </figure>
-                                    <h4 class="how-works__heading">
+                                    <h3 class="how-works__heading">
                                         Подпишись
-                                    </h4>
+                                    </h3>
                                     <p class="how-works__text">
                                         Оплати подписку на сайте или в приложении
                                     </p>
@@ -115,9 +115,9 @@
                                     <figure class="how-works__images">
                                         <img src="images/device/moyvelik/how-works/how-works_2.webp" alt="">
                                     </figure>
-                                    <h4 class="how-works__heading">
+                                    <h3 class="how-works__heading">
                                         Получи велик
-                                    </h4>
+                                    </h3>
                                     <p class="how-works__text">
                                         Доставим куда и когда захочешь
                                     </p>
@@ -129,9 +129,9 @@
                                     <figure class="how-works__images">
                                         <img src="images/device/moyvelik/how-works/how-works_3.webp" alt="">
                                     </figure>
-                                    <h4 class="how-works__heading">
+                                    <h3 class="how-works__heading">
                                         Сломался?
-                                    </h4>
+                                    </h3>
                                     <p class="how-works__text">
                                         Починим или выдадим новый
                                     </p>
@@ -143,9 +143,9 @@
                                     <figure class="how-works__images">
                                         <img src="images/device/moyvelik/how-works/how-works_4.webp" alt="">
                                     </figure>
-                                    <h4 class="how-works__heading">
+                                    <h3 class="how-works__heading">
                                         Больше не нужен?
-                                    </h4>
+                                    </h3>
                                     <p class="how-works__text">
                                         Верни в удобное время в наш офис
                                     </p>
@@ -163,8 +163,9 @@
                         <h2 class="choose-model__title">
                             <span class="span-yellow">Модели</span> велосипедов
                         </h2>
-                        <div class="choose-model__body device-body">
-                            <div class="choose-device__column choose-device__bike">
+                        <ul class="choose-model__body device-body" aria-label="Модели велосипедов">
+
+                            <li class="choose-device__column choose-device__bike" tabindex="0">
                                 <div class="card choose-device__item">
                                     <figure class="device-model__images choose-bike__images">
                                         <img src="images/device/moyvelik/choose-model/choose-model_1.webp" alt="Универсальный городской велосипед Forward SPORTING 29L">
@@ -172,9 +173,9 @@
                                     <h3 class="device-model__heading">
                                         Универсальный городской велосипед
                                     </h3>
-                                    <h6 class="device-model__subheading">
+                                    <p class="device-model__subheading">
                                         Forward SPORTING 29L или аналог
-                                    </h6>
+                                    </p>
                                     <div class="device-model__price-box">
                                         <p class="device-model__price-text">
                                            Аренда на 1 месяц<br>
@@ -273,9 +274,9 @@
                                         </div>
                                         <!-- modal-end -->
                                 </div>
-                            </div>
+                            </li>
     
-                            <div class="choose-device__column choose-device__bike">
+                            <li class="choose-device__column choose-device__bike" tabindex="0">
                                 <div class="card choose-device__item">
                                     <figure class="device-model__images choose-bike__images">
                                         <img src="images/device/moyvelik/choose-model/choose-model_2.webp" alt="Профессиональный (горный) велосипед Forward SPORTING 29X">
@@ -283,9 +284,9 @@
                                     <h3 class="device-model__heading">
                                         Профессиональный (горный) велосипед
                                     </h3>
-                                    <h6 class="device-model__subheading">
+                                    <p class="device-model__subheading">
                                         Forward SPORTING 29X или аналог
-                                    </h6>
+                                    </p>
                                     <div class="device-model__price-box">
                                         <p class="device-model__price-text">
                                            Аренда на 1 месяц<br>
@@ -384,14 +385,15 @@
                                     </div>
                                     <!-- modal-end -->
                                 </div>
-                            </div>
+                            </li>
     
-                        </div>
+                        </ul>
                         <h2 class="choose-model__title">
                             А еще у нас есть <span class="span-yellow">самокаты</span>
                         </h2>
-                        <div class="choose-model__body device-body">
-                            <div class="choose-device__column choose-device__bike">
+                        <ul class="choose-model__body device-body" aria-label="Выбрать электросамокат">
+
+                            <li class="choose-device__column choose-device__bike" tabindex="0">
                                 <div class="card choose-device__item">
                                     <figure class="device-model__images choose-bike__images">
                                         <img src="images/device/moyvelik/choose-model/choose-model_3.png" alt="Электрический самокат Yamato 0809">
@@ -399,9 +401,9 @@
                                     <h3 class="device-model__heading">
                                         Электрический самокат
                                     </h3>
-                                    <h6 class="device-model__subheading">
+                                    <p class="device-model__subheading">
                                         Yamato 0809
-                                    </h6>
+                                    </p>
                                     <div class="device-model__price-box">
                                         <p class="device-model__price-text">
                                            Аренда на 1 месяц<br>
@@ -500,9 +502,9 @@
                                     </div>
                                     <!-- modal-end -->
                                 </div>
-                            </div>
+                            </li>
     
-                            <div class="choose-device__column choose-device__bike">
+                            <li class="choose-device__column choose-device__bike" tabindex="0">
                                 <div class="card choose-device__item">
                                     <figure class="device-model__images choose-bike__images">
                                         <img src="images/device/moyvelik/choose-model/choose-model_4.png" alt="Электрический самокат Aovo 365M Pro">
@@ -510,9 +512,9 @@
                                     <h3 class="device-model__heading">
                                         Электрический самокат
                                     </h3>
-                                    <h6 class="device-model__subheading">
+                                    <p class="device-model__subheading">
                                         Aovo 365M Pro
-                                    </h6>
+                                    </p>
                                     <div class="device-model__price-box">
                                         <p class="device-model__price-text">
                                            Аренда на 1 месяц<br>
@@ -611,9 +613,9 @@
                                     </div>
                                     <!-- modal-end -->
                                 </div>
-                            </div>
+                            </li>
     
-                        </div>
+                        </ul>
                     </div>
                 </section>
             </div>
@@ -653,13 +655,13 @@
                                         <img src="images/device/moyvelik/transport-work/transport-work_1.webp" alt="Курьер стоит возле электросамоката">
                                     </figure>
                                     <div class="transport-work__info">
-                                        <h4 class="transport-work__heading">
+                                        <h3 class="transport-work__heading">
                                             Программа для курьеров
-                                        </h4>
+                                        </h3>
                                         <p class="transport-work__text">
                                             Доставляй больше заказов и уставай меньше в течение рабочего дня
                                         </p>
-                                        <a href="#" class="transport-work__details details">
+                                        <a class="transport-work__details details">
                                             Подробнее
                                         </a>
                                     </div>
@@ -672,13 +674,13 @@
                                         <img src="images/device/moyvelik/transport-work/transport-work_2.webp" alt="Курьер стоит возле электросамоката">
                                     </figure>
                                     <div class="transport-work__info">
-                                        <h4 class="transport-work__heading">
+                                        <h3 class="transport-work__heading">
                                             Программа для бизнеса
-                                        </h4>
+                                        </h3>
                                         <p class="transport-work__text">
                                             Зарабатывай на доставке больше и доставляй быстрее
                                         </p>
-                                        <a href="#" class="transport-work__details details">
+                                        <a class="transport-work__details details">
                                             Подробнее
                                         </a>
                                     </div>
@@ -715,7 +717,8 @@
                         <h2 class="other-projects__title">
                             Наши другие <span class="span-yellow">проекты</span>
                         </h2>
-                        <ul class="other-projects__body">
+                        <ul class="other-projects__body" aria-label="Наши другие проекты">
+
                             <li class="other-projects__column">
                                 <div class="other-projects__item" style="background-image: url(images/device/moyvelik/other-projects/other-projects_1.webp);">
                                     <div tabindex="0" class="other">
@@ -728,6 +731,7 @@
                                     </div>
                                 </div>
                             </li>
+
                             <li class="other-projects__column">
                                 <div class="other-projects__item" style="background-image: url(images/device/moyvelik/other-projects/other-projects_2.webp);">
                                     <div tabindex="0" class="other">
@@ -740,6 +744,7 @@
                                     </div>
                                 </div>
                             </li>
+
                             <li class="other-projects__column">
                                 <div class="other-projects__item" style="background-image: url(images/device/moyvelik/other-projects/other-projects_3.webp);">
                                     <div tabindex="0" class="other">
@@ -752,6 +757,7 @@
                                     </div>
                                 </div>
                             </li>
+                            
                         </ul>
                     </div>
                 </section>
@@ -765,59 +771,61 @@
                             </span>
                         </h2>
                         <div class="questions-answers__body">
+                            
                             <ul class="questions-answers__list">
                                 <li class="questions-answers__item">
-                                    <a href="#questions-1" class="questions-answers__link questions-answers__link--active">
+                                    <button data-tab="tab-1" class="questions-answers__link activ">
                                         Подписка
-                                    </a>
+                                    </button>
                                 </li>
                                 <li class="questions-answers__item">
-                                    <a href="#questions-2" class="questions-answers__link">
-                                        Велосипеды
-                                    </a>
+                                    <button data-tab="tab-2" class="questions-answers__link">
+                                        Самокаты
+                                    </button>
                                 </li>
                                 <li class="questions-answers__item">
-                                    <a href="#questions-3" class="questions-answers__link">
+                                    <button data-tab="tab-3" class="questions-answers__link">
                                         Доставка
-                                    </a>
+                                    </button>
                                 </li>
                                 <li class="questions-answers__item">
-                                    <a href="#questions-4" class="questions-answers__link">
+                                    <button data-tab="tab-4" class="questions-answers__link">
                                         Возврат
-                                    </a>
+                                    </button>
                                 </li>
                                 <li class="questions-answers__item">
-                                    <a href="#questions-5" class="questions-answers__link">
+                                    <button data-tab="tab-5" class="questions-answers__link">
                                         Обслуживание
-                                    </a>
+                                    </button>
                                 </li>
                                 <li class="questions-answers__item">
-                                    <a href="#questions-6" class="questions-answers__link">
+                                    <button data-tab="tab-6" class="questions-answers__link">
                                         Прочее
-                                    </a>
+                                    </button>
                                 </li>
                             </ul>
                             <div class="questions-answers__container">
-                                <div id="questions-1" class="questions-answers__info questions-answers__info--active">
+
+                                <div data-tab-content id="tab-1" class="questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Как работает подписка "Мой велосипед"
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Как работает подписка "Мой самокат"
                                             </button>
                                             <p class="questions-info__text">
-                                                Вы оформляете подписку на сайте, следуя инструкциям. После этого с вами связывается наш менеджер для подтверждения подписки и согласования деталей доставки велосипеда. В течение 48 часов после оформления подписки курьер доставляет вам велосипед и оформляет необходимые документы. Подписка начинает действовать с момента получения велосипеда. Вы пользуетесь велосипедом, пока он вам не надоест. Если велосипед вам больше не нужен - вы можете отменить подписку, и наш курьер заберет у вас велосипед.
+                                                Вы оформляете подписку на сайте, следуя инструкциям. После этого с вами связывается наш менеджер для подтверждения подписки и согласования деталей доставки электросамоката. В течение 48 часов после оформления подписки курьер доставляет вам электросамокат и оформляет необходимые документы. Подписка начинает действовать с момента получения самоката. Вы пользуетесь самокатом, пока он вам не надоест. Если самокат вам больше не нужен - вы можете отменить подписку, и наш курьер заберет у вас самокат.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Как мне оформить подписку на "Мой велосипед"?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Как мне оформить подписку на "Мой самокат"?
                                             </button>
                                             <p class="questions-info__text">
                                                 Вы можете оформить подписку прямо у нас на сайте. Просто <a class="questions-info__text-link">перейдите по ссылке</a> и следуйте дальнейшим инструкциям.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Кто может оформить подписку?
                                             </button>
                                             <p class="questions-info__text">
@@ -825,15 +833,15 @@
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Что входит в подписку?
                                             </button>
                                             <p class="questions-info__text">
-                                                Подписка включает в себя велосипед и защитный замок.
+                                                Подписка включает в себя электросамокат, зарядное устройство и защитный замок.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Какие документы необходимы для оформления?
                                             </button>
                                             <p class="questions-info__text">
@@ -841,7 +849,7 @@
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Я иностранный гражданин. Могу ли я оформить подписку?
                                             </button>
                                             <p class="questions-info__text">
@@ -849,24 +857,24 @@
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Должен ли я оставлять залог?
                                             </button>
                                             <p class="questions-info__text">
-                                                Нет, мы не требуем оставлять залог за велосипед.
+                                                Нет, мы не требуем оставлять залог за электросамокат.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Мне нет 18 лет, могут ли за меня оформить подписку мои родители?
                                             </button>
                                             <p class="questions-info__text">
-                                                Оформить подписку может лицо старше 18 лет. Всю ответственность за пользование велосипедом третьими лицами несет человек, оформивший подписку.
+                                                Оформить подписку может лицо старше 18 лет. Всю ответственность за пользование самокатом третьими лицами несет человек, оформивший подписку. Мы настоятельно не рекомендуем использовать самокат лицами, младше 18 лет, так как это транспортное средство повышенной опасности. Мы также настоятельно рекомендуем не передавать ваш самокат любым третьим лицам.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Как я могу продлить подписку, если захочу пользоваться велосипедом и дальше?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Как я могу продлить подписку, если захочу пользоваться электросамокатом и дальше?
                                             </button>
                                             <p class="questions-info__text">
                                                 Подписка каждый месяц продлевается автоматически путем списания очередного месячного платежа с карты, на которую вы оформляли подписку. Вы можете отменить подписку в любой день до конца периода, в течение которого действует подписка, самостоятельно в личном кабинете. Подпиской можно пользоваться до окончания оплаченного периода независимо от даты отмены подписки.
@@ -875,100 +883,109 @@
                                     </ul>
                                     
                                 </div>
-                                <div id="questions-2" class="questions-answers__info">
+
+                                <div data-tab-content id="tab-2" class="hidden questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Я получаю новый велосипед?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Я получаю новый электросамокат?
                                             </button>
                                             <p class="questions-info__text">
-                                                Оформив подписку, вы получите новый велосипед или велосипед, состояние которого максимально близко к новому.
+                                                Оформив подписку, вы получите новый самокат или самокат, состояние которого максимально близко к новому.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Как пользоваться велосипедом?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Какие модели есть в наличии?
                                             </button>
                                             <p class="questions-info__text">
-                                                С правилами пользования велосипедом вы можете ознакомиться по <a class="questions-info__text-link">ссылке</a>. Рекомендуем ознакомиться с Правилами Дорожного Движения по <a class="questions-info__text-link">ссылке</a>.
+                                                Мы предоставляем в аренду электросамокаты фирмы Yamato. Наша базовая модель – Yamato 0809. О наличии других моделей уточняйте у менеджеров нашего сервиса в чате на сайте, мессенджерах или по телефону.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Должен ли я оставлять велосипед на специально предусмотренных для этого станциях?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Как пользоваться самокатом?
                                             </button>
                                             <p class="questions-info__text">
-                                                Нет, в этом нет никакой необходимости. Это ваш велосипед, и вы можете оставлять его где угодно, позаботившись о необходимых мерах безопасности и убедившись, что он не мешает движению пешеходов и автомобилистов. Между тем, мы рекомендуем парковать велосипед на велостоянках и обязательно использовать замок, который входит в стоимость подписки. В целях безопасности не оставляйте велосипед без присмотра на длительное время особенно в ночное время суток.
+                                                С правилами пользования электросамокатом вы можете ознакомиться по <a class="questions-info__text-link">ссылке</a>. Рекомендуем ознакомиться с Правилами Дорожного Движения по <a class="questions-info__text-link">ссылке</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Что делать если велосипед украли?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Должен ли я оставлять самокат на специально предусмотренных для этого станциях?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы настоятельно просим относиться к велосипеду, как к вашему собственному, и принимать все необходимые меры безопасности. В случае кражи велосипеда мы взимаем с вас его стоимость, указанную в акте передачи, и рекомендуем вам обратиться в полицию.
+                                                Нет, в этом нет никакой необходимости. Это ваш самокат, и вы можете оставлять его где угодно, позаботившись о необходимых мерах безопасности и убедившись, что он не мешает движению пешеходов и автомобилистов. Между тем, мы рекомендуем парковать самокат на велостоянках и обязательно использовать замок, который входит в стоимость подписки. В целях безопасности не оставляйте самокат без присмотра на длительное время особенно в ночное время суток.
+                                            </p>
+                                        </li>
+                                        <li class="questions-info__item">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Что делать если самокат украли?
+                                            </button>
+                                            <p class="questions-info__text">
+                                                Мы настоятельно просим относиться к электросамокату, как к вашему собственному, и принимать все необходимые меры безопасности. В случае кражи самоката мы взимаем с вас его стоимость, указанную в акте передачи, и рекомендуем вам обратиться в полицию.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
     
-                                <div id="questions-3" class="questions-answers__info">
+                                <div data-tab-content id="tab-3" class="hidden questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Сколько стоит доставка велосипеда?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Сколько стоит доставка самоката?
                                             </button>
                                             <p class="questions-info__text">
                                                 В пределах МКАД и до 30 км от МКАД - бесплатно. Стоимость доставки от 30 до 40 км от МКАД составляет 400 рублей. Выезд курьера для возврата и замены электросамоката в пределах МКАД и до 30 км от МКАД входит в стоимость подписки. Выезд курьера от 30 км до 40 км от МКАД для возврата и замены электросамоката составляет 400 рублей.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Могу ли я забрать и вернуть велосипед сам?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Могу ли я забрать и вернуть самокат сам?
                                             </button>
                                             <p class="questions-info__text">
-                                                Да, вы можете забрать и вернуть велосипед самостоятельно в наш офис по адресу 1-й Кожевнический пер., д.6, стр. 6, заранее согласовав время с оператором по телефону: +7 (495) 191-01-79
+                                                Да, вы можете забрать и вернуть самокат самостоятельно в наш офис по адресу 1-й Кожевнический пер., д.6, стр. 6, заранее согласовав время с оператором.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Я живу за МКАД, могу ли я использовать ваш сервис?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
                                                 Доставка осуществляется в пределах до 40 км за МКАД
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Как быстро мне доставляет велосипед?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Как быстро мне доставляет самокат?
                                             </button>
                                             <p class="questions-info__text">
-                                                После оформления подписки вы получите ваш велосипед в течение 48 часов.
+                                                После оформления подписки вы получите ваш самокат в течение 48 часов.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
     
-                                <div id="questions-4" class="questions-answers__info">
+                                <div data-tab-content id="tab-4" class="hidden questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                У меня закончилась подписка, как быстро я должен вернуть велосипед?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                У меня закончилась подписка, как быстро я должен вернуть самокат?
                                             </button>
                                             <p class="questions-info__text">
-                                                По истечении подписки вы должны вернуть велосипед в течение 48 часов. Для этого мы связываемся с вами, чтобы согласовать время и место забора велосипеда. По прошествии 48 часов, если Вы не возвращаете велосипед, начинают начисляться пени в размере 500 руб. в сутки за каждый день просрочки возврата велосипеда.
+                                                По истечении подписки вы должны вернуть самокат в течение 48 часов. Для этого мы связываемся с вами, чтобы согласовать время и место забора самоката. По прошествии 48 часов, если Вы не возвращаете самокат, начинают начисляться пени в размере 500 руб. в сутки за каждый день просрочки возврата самоката
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Могу ли я вернуть велосипед раньше, до окончания подписки?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Могу ли я вернуть самокат раньше, до окончания подписки?
                                             </button>
                                             <p class="questions-info__text">
-                                                Вы можете вернуть велосипед в любой день до окончания подписки. Однако сумма за неиспользованные дни оплаченной подписки не возвращается.
+                                                Вы можете вернуть самокат в любой день до окончания подписки. Однако сумма за неиспользованные дни оплаченной подписки не возвращается.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Как я могу отменить подписку?
                                             </button>
                                             <p class="questions-info__text">
@@ -976,82 +993,81 @@
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Как проходит процедура возврата велосипеда?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Как проходит процедура возврата самоката?
                                             </button>
                                             <p class="questions-info__text">
-                                                По прекращении срока подписки с вами свяжется наш оператор для согласования места и времени забора велосипеда. После этого к вам приедет наш курьер, который оценит состояние велосипеда, сделает его фотографии или видео и занесет необходимую информацию о велосипеде в акт приема. Вы также можете вернуть велосипед самостоятельно в наш офис.
+                                                По прекращении срока подписки с вами свяжется наш оператор для согласования места и времени забора самоката. После этого к вам приедет наш курьер, который оценит состояние самоката, сделает его фотографии или видео и занесет необходимую информацию о самокате в акт приема. Вы также можете вернуть самокат самостоятельно в наш офис.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
     
-                                <div id="questions-5" class="questions-answers__info">
+                                <div data-tab-content id="tab-5" class="hidden questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                У меня сломался велосипед, что делать?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                У меня сломался самокат, что делать?
                                             </button>
                                             <p class="questions-info__text">
-                                                В случае поломки велосипеда немедленно прекратите его использование и свяжитесь с нами для согласования времени и места замены велосипеда на новый.
+                                                В случае поломки самоката немедленно прекратите его использование и свяжитесь с нами для согласования времени и места замены самоката на новый.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Взимаются ли с меня штрафы в случае поломки велосипеда?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Взимаются ли с меня штрафы в случае поломки самоката?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы берем на себя полностью заботы по обслуживанию и ремонту поломок велосипеда, связанных с заводским браком или произошедших при правильном и аккуратном его использовании. Просто напишите в нашу службу поддержки, и курьер оперативно доставит вам новый велосипед взамен старого. Поломки в результате неправильного и неаккуратного использования велосипеда оплачиваются пропорционально нанесенному ущербу за счет пользователя. К таким поломкам не относится нормальный износ велосипеда. Более подробно с размерами штрафов можно ознакомиться в <a class="questions-info__text-link">оферте</a>.
+                                                Мы берем на себя полностью заботы по обслуживанию и ремонту поломок самоката, связанных с заводским браком или произошедших при правильном и аккуратном его использовании. Просто напишите в нашу службу поддержки, и курьер оперативно доставит вам новый самокат взамен старого. Поломки в результате неправильного и неаккуратного использования электросамоката оплачиваются пропорционально нанесенному ущербу за счет пользователя. К таким поломкам не относится нормальный износ самоката. Более подробно с размерами штрафов можно ознакомиться в <a class="questions-info__text-link">офферте</a>. Инструкция по использованию электросамоката будет доступна в личном кабинете после оформления подписки. Вы также получите краткую инструкцию вместе с самокатом, чтобы как можно быстрее начать его использование.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Предоставляете ли Вы страховку от поломок, кражи велосипеда или нанесения ущерба велосипеду третьим лицам?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Предоставляете ли Вы страховку от поломок, кражи самоката или нанесения ущерба самокату третьим лицам?
                                             </button>
                                             <p class="questions-info__text">
-                                                Для самоката и велосипеда доступно оформление подписки с тарифом «Защита».
-                                                Данный тариф покрывает твою материальную ответственность при повреждениях и поломках, полученных в ходе использования девайса и сокращает размер твоей материальной ответственности при краже девайса третьими лицами. Более подробно с этим вопросом можно ознакомится в <a class="questions-info__text-link">оферте</a>.
+                                                Для самоката и велосипеда доступно оформление подписки с тарифом «Защита». Данный тариф покрывает твою материальную ответственность при повреждениях и поломках, полученных в ходе использования девайса и сокращает размер твоей материальной ответственности при краже девайса третьими лицами. Более подробно с этим вопросом можно ознакомится в оферте.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Если велосипед вышел из строя, как устанавливается, есть ли в этом вина пользователя?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Если самокат вышел из строя, как устанавливается, есть ли в этом вина пользователя?
                                             </button>
                                             <p class="questions-info__text">
-                                                Для определения причин возникновения видимых повреждений и выявления скрытых повреждений производится техническая экспертиза велосипеда. Более подробно с этим вопросом можно ознакомится в <a class="questions-info__text-link">оферте</a>, представленной на сайте.
+                                                Для определения причин возникновения видимых повреждений и выявления скрытых повреждений производится техническая экспертиза самоката. Более подробно с этим вопросом можно ознакомится в <a class="questions-info__text-link">офферте</a>, представленной на сайте.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
     
-                                <div id="questions-6" class="questions-answers__info">
+                                <div data-tab-content id="tab-6" class="hidden questions-answers__info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 В каких городах работает ваш сервис?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы предоставляем свои услуги на территории Москвы, Санкт-Петербурга, Казани, Краснодара и Нижнего Новгорода. Однако, если вы хотите, чтобы наш сервис появился в вашем городе, дайте нам знать, написав на электронную почту <a class="questions-info__text-link">info@moydevice.ru</a>, указав тему письма «Хочу «Мой велосипед» в городе N». 
+                                                Мы предоставляем свои услуги только на территории Москвы, Казани, Санкт-Петербурга и Краснодара. Однако, если вы хотите, чтобы наш сервис появился в вашем городе, дайте нам знать, написав на электронную почту <a class="questions-info__text-link">info@moysamokat.ru</a>, указав тему письма «Хочу «Мой самокат» в городе N».
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <h5 class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Как происходит оплата?
-                                            </h5>
+                                            </button>
                                             <p class="questions-info__text">
-                                                Оплатить подписку можно сразу или при получении велосипеда по карте из личного кабинета. Ссылка на оплату будет доступна после прохождения регистрации на сайте.
+                                                Оплатить подписку можно сразу или при получении самоката по карте из личного кабинета. Ссылка на оплату будет доступна после прохождения регистрации на сайте.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
-                                                Правила оплаты и безопасности, конфиденциальность сервиса "Мой велосипед"?
+                                            <button class="questions-info__heading" data-name="accordeon-title">
+                                                Правила оплаты и безопасности, конфиденциальность сервиса "Мой самокат"?
                                             </button>
                                             <p class="questions-info__text">
                                                 Со всей подробной информацией вы можете ознакомиться <a class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Я курьер. Могу ли я воспользоваться вашей подпиской?
                                             </button>
                                             <p class="questions-info__text">
@@ -1059,7 +1075,7 @@
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
-                                            <button class="questions-info__heading">
+                                            <button class="questions-info__heading" data-name="accordeon-title">
                                                 Я юридическое лицо. Могу ли я воспользоваться вашей подпиской?
                                             </button>
                                             <p class="questions-info__text">
@@ -1068,6 +1084,7 @@
                                         </li>
                                     </ul>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -1080,9 +1097,9 @@
                 <div class="footer__body">
                 <div class="footer__column-info">
                     <div class="footer__contacts">
-                        <h4 class="footer__heading">
+                        <h3 class="footer__heading">
                             Контакты
-                        </h4>
+                        </h3>
                         <p class="footer__text">
                             Ежедневно с 10:00 до 20:00
                         </p>
@@ -1186,9 +1203,10 @@
 
     </div>
 
+    <script src="js/accordeon.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tabs.js"></script>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
