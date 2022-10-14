@@ -9,11 +9,11 @@ accordeonTitle.forEach((el) => {
         
         if(content.style.maxHeight) {
 
-            document.querySelectorAll('.questions-info__text').forEach((el) => el.style.maxHeight = null);
+            document.querySelectorAll('.popular-questions__text').forEach((el) => el.style.maxHeight = null);
 
         } else {
 
-            document.querySelectorAll('.questions-info__text').forEach((el) => el.style.maxHeight = null);
+            document.querySelectorAll('.popular-questions__text').forEach((el) => el.style.maxHeight = null);
             content.style.maxHeight = content.scrollHeight + 'px';
 
         };
