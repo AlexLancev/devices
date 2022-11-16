@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Личный кабинет</title>
 </head>
+
 <body>
 
-    <div class="cabinets" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background/cabinet-bg.jpg);">
+    <div class="cabinets"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background/cabinet-bg.jpg);">
         <div class="container">
             <div class="cabinets__body">
                 <form class="cabinets__form" action="#" method="post">
@@ -18,12 +21,12 @@
                         <legend class="cabinets__title">
                             ЛИЧНЫЙ КАБИНЕТ
                         </legend>
-                        <input class="cabinets__input" type="tel" name="cabinets-phone" placeholder="Телефон">
+                        <input class="cabinets__input" type="tel" name="cabinets-phone" placeholder="Телефон" required>
                         <p class="cabinets__text">
                             Вводя номер телефона, ты соглашаешься с
-                        <a class="cabinets__privacy" href="policy.html">
-                            Политикой конфиденциальности
-                        </a>
+                            <a class="cabinets__privacy" href="policy.html">
+                                Политикой конфиденциальности
+                            </a>
                         </p>
                         <button class="cabinets__btn btn" type="button">
                             Получить код
@@ -38,4 +41,5 @@
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

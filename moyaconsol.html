@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Моя консоль</title>
 </head>
+
 <body>
-    
+
 
     <div class="wrapper">
 
         <header class="header-device"
             style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background/moyaconsol-bg.jpg);">
-            <button class="header__burger" aria-label="Меню открыть закрыть">
-                <span></span>
-            </button>
-            <nav class="header__nav nav" aria-label="Меню сайта">
-                <ul class="nav__list-device">
+            <div class="container">
+                <div class="header-content-box">
+                    <button class="burger" aria-label="Меню открыть закрыть">
+                        <span></span>
+                    </button>
+                    <nav class="header-nav nav" aria-label="Меню сайта">
+                        <ul class="nav__list-device">
 
-                    <li class="nav__item">
-                        <a class="nav__link" href="index.html">главная</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">главная</a>
+                            </li>
 
-                    <li class="nav__item">
-                        <a class="nav__link" href="#console-subscription">подписка</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#console-subscription">подписка</a>
+                            </li>
 
-                    <li class="nav__item">
-                        <a class="nav__link" href="#console-answers">faq</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#console-answers">faq</a>
+                            </li>
 
-                    <li class="nav__item">
-                        <a class="nav__link" href="#console-devices">девайсы</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#console-devices">девайсы</a>
+                            </li>
 
-                    <li class="nav__item">
-                        <a class="nav__link" href="krutikolesa.html">курьерам</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="krutikolesa.html">курьерам</a>
+                            </li>
 
-                    <li class="nav__item item-cabinet">
-                        <a class="link-cabinet" href="lk.html">личный кабинет</a>
-                    </li>
+                            <li class="nav-item item-cabinet">
+                                <a class="link-cabinet" href="lk.html">личный кабинет</a>
+                            </li>
 
-                    <li class="nav__item">
-                        <a class="btn header__btn" href="#console-subscription">Оформить подписку</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__info container">
-                <div class="header__info-box">
-                    <h1 class="header__title">
-                        АРЕНДА ИГРОВОЙ КОНСОЛИ ПО ПОДПИСКЕ ОТ <span>2400 ₽</span> в месяц
-                    </h1>
-                    <h2 class="header__subtitle">
-                        Оформи аренду от <span>2 400 ₽</span> в месяц и получи велосипед.
-                    </h2>
-                    <h2 class="header__subtitle">
-                        Доставим бесплатно до двери. <span>Без залога.</span>
-                    </h2>
-                    <a class="btn header__btn-device" href="#console-subscription">Получить консоль</a>
+                            <li class="nav-item">
+                                <a class="btn header-btn" href="#console-subscription">Оформить подписку</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-info">
+                        <div class="header-info-box">
+                            <h1 class="header-title">
+                                АРЕНДА ИГРОВОЙ КОНСОЛИ ПО ПОДПИСКЕ ОТ <span>2400 ₽</span> в месяц
+                            </h1>
+                            <h2 class="header-subtitle">
+                                Оформи аренду от <span>2 400 ₽</span> в месяц и получи велосипед.
+                            </h2>
+                            <h2 class="header-subtitle">
+                                Доставим бесплатно до двери. <span>Без залога.</span>
+                            </h2>
+                            <a class="btn header-btn-device" href="#console-subscription">Получить консоль</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -162,15 +168,16 @@
                 </section>
                 <a id="console-subscription" class="console-subscription"></a>
                 <section>
-                    <div class="choose-model device">
+                    <div class="choose-model device choose-device device-model choose-console">
                         <h2 class="choose-model__title">
                             <span class="span-yellow">Варианты аренды</span> консоли
                         </h2>
-                        <ul class="choose-model__body device-body" aria-label="Варианты аренды консоли">
+                        <ul class="choose-model__body device-body choose-device device-model"
+                            aria-label="Варианты аренды консоли">
 
                             <li class="choose-device__column choose-device__console" tabindex="0">
                                 <div class="card choose-device__item">
-                                    <figure class="device-model__images choose-console__images">
+                                    <figure class="device-model__images choose-console-images">
                                         <img src="images/device/moyaconsol/choose-model/choose-model_1.webp"
                                             alt="Консоль Xbox One S">
                                     </figure>
@@ -193,11 +200,12 @@
                                     <p class="device-model__price-text">
                                         <span>+ 400₽</span> тариф <a>"Защита"</a>
                                     </p>
-                                    <button data-href="popup-xboxones1" class="btn device-choose__btn specifications popup-link">
+                                    <button data-href="popup-xboxones1"
+                                        class="btn device-choose-btn specifications popup-link">
                                         Характеристики
                                     </button>
                                     <!-- modal-start -->
-                                    <div id="popup-xboxones1" class="popup" role="alert">
+                                    <div id="popup-xboxones1" class="popup popup-specifications" role="alert">
                                         <div class="popup__body">
                                             <div class="popup__content">
                                                 <button type="button" class="popup__close close-popup"
@@ -239,7 +247,7 @@
                                         </div>
                                     </div>
                                     <!-- modal-end -->
-                                    <button data-href="popup15" class="btn device-choose__btn popup-link">
+                                    <button data-href="popup15" class="btn device-choose-btn popup-link">
                                         Попробовать
                                     </button>
                                     <!-- modal-start -->
@@ -256,10 +264,12 @@
                                                             Оформить подписку
                                                         </legend>
                                                         <label class="popup__pgf">
-                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
-                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
                                                             <span>Девайсы</span>
@@ -337,7 +347,7 @@
 
                             <li class="choose-device__column choose-device__console" tabindex="0">
                                 <div class="card choose-device__item">
-                                    <figure class="device-model__images choose-console__images">
+                                    <figure class="device-model__images choose-console-images">
                                         <img src="images/device/moyaconsol/choose-model/choose-model_2.webp"
                                             alt="Игровая консоль Xbox и плазменный телевизор 32 дюйма">
                                     </figure>
@@ -360,7 +370,7 @@
                                     <p class="device-model__price-text">
                                         <span>+ 400₽</span> тариф <a>"Защита"</a>
                                     </p>
-                                    <button data-href="popup16" class="btn device-choose__btn popup-link">
+                                    <button data-href="popup16" class="btn device-choose-btn popup-link">
                                         Попробовать
                                     </button>
                                     <!-- modal-start -->
@@ -377,10 +387,12 @@
                                                             Оформить подписку
                                                         </legend>
                                                         <label class="popup__pgf">
-                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
-                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
                                                             <span>Девайсы</span>
@@ -457,7 +469,7 @@
 
                             <li class="choose-device__column choose-device__console" tabindex="0">
                                 <div class="card choose-device__item">
-                                    <figure class="device-model__images choose-console__images">
+                                    <figure class="device-model__images choose-console-images">
                                         <img src="images/device/moyaconsol/choose-model/choose-model_3.webp"
                                             alt="Игровая консоль Xbox и плазменный телевизор 43 дюйма">
                                     </figure>
@@ -480,7 +492,7 @@
                                     <p class="device-model__price-text">
                                         <span>+ 400₽</span> тариф <a>"Защита"</a>
                                     </p>
-                                    <button data-href="popup17" class="btn device-choose__btn popup-link">
+                                    <button data-href="popup17" class="btn device-choose-btn popup-link">
                                         Попробовать
                                     </button>
                                     <!-- modal-start -->
@@ -497,10 +509,12 @@
                                                             Оформить подписку
                                                         </legend>
                                                         <label class="popup__pgf">
-                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
-                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
                                                             <span>Девайсы</span>
@@ -583,7 +597,7 @@
 
                             <li class="choose-device__column choose-device__console" tabindex="0">
                                 <div class="card choose-device__item">
-                                    <figure class="device-model__images choose-console__images">
+                                    <figure class="device-model__images choose-console-images">
                                         <img src="images/device/moyaconsol/choose-model/choose-model_LED_32.png"
                                             alt="Телевизор LED 32 дюйма">
                                     </figure>
@@ -619,15 +633,16 @@
                                         </ul>
                                         <p class="choose-console__price">
                                             Цена за месяц:
-                                            <span class="choose-price__span">
+                                            <span class="choose-price-span">
                                                 1 490 ₽
                                             </span>
                                         </p>
-                                        <button data-href="popup-led32" class="btn device-choose__btn specifications popup-link">
+                                        <button data-href="popup-led32"
+                                            class="btn device-choose-btn specifications popup-link">
                                             Характеристики
                                         </button>
                                         <!-- modal-start -->
-                                        <div id="popup-led32" class="popup" role="alert">
+                                        <div id="popup-led32" class="popup popup-specifications" role="alert">
                                             <div class="popup__body">
                                                 <div class="popup__content">
                                                     <button type="button" class="popup__close close-popup"
@@ -684,7 +699,7 @@
                                             </div>
                                         </div>
                                         <!-- modal-end -->
-                                        <button data-href="popup18" class="btn device-choose__btn popup-link">
+                                        <button data-href="popup18" class="btn device-choose-btn popup-link">
                                             Оформить подписку
                                         </button>
                                         <!-- modal-start -->
@@ -702,11 +717,11 @@
                                                             </legend>
                                                             <label class="popup__pgf">
                                                                 <input type="text" name="name-user"
-                                                                    placeholder="Ваше имя">
+                                                                    placeholder="Ваше имя" required>
                                                             </label>
                                                             <label class="popup__pgf">
                                                                 <input type="tel" name="phone"
-                                                                    placeholder="Номер телефона">
+                                                                    placeholder="Номер телефона" required>
                                                             </label>
                                                             <label class="popup__pgf">
                                                                 <span>Девайсы</span>
@@ -785,7 +800,7 @@
 
                             <li class="choose-device__column choose-device__console" tabindex="0">
                                 <div class="card choose-device__item">
-                                    <figure class="device-model__images choose-console__images">
+                                    <figure class="device-model__images choose-console-images">
                                         <img src="images/device/moyaconsol/choose-model/choose-model_LED_43.png"
                                             alt="Телевизор LED 43 дюйма">
                                     </figure>
@@ -820,15 +835,16 @@
                                     </ul>
                                     <p class="choose-console__price">
                                         Цена за месяц:
-                                        <span class="choose-price__span">
+                                        <span class="choose-price-span">
                                             1 990 ₽
                                         </span>
                                     </p>
-                                    <button data-href="popup-led43" class="btn device-choose__btn specifications popup-link">
+                                    <button data-href="popup-led43"
+                                        class="btn device-choose-btn specifications popup-link">
                                         Характеристики
                                     </button>
                                     <!-- modal-start -->
-                                    <div id="popup-led43" class="popup" role="alert">
+                                    <div id="popup-led43" class="popup popup-specifications" role="alert">
                                         <div class="popup__body">
                                             <div class="popup__content">
                                                 <button type="button" class="popup__close close-popup"
@@ -884,7 +900,7 @@
                                         </div>
                                     </div>
                                     <!-- modal-end -->
-                                    <button data-href="popup19" class="btn device-choose__btn popup-link">
+                                    <button data-href="popup19" class="btn device-choose-btn popup-link">
                                         Оформить подписку
                                     </button>
                                     <!-- modal-start -->
@@ -901,10 +917,12 @@
                                                             Оформить подписку
                                                         </legend>
                                                         <label class="popup__pgf">
-                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
-                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
                                                             <span>Девайсы</span>
@@ -1023,10 +1041,12 @@
                                                             Оформить подписку
                                                         </legend>
                                                         <label class="popup__pgf">
-                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
-                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
                                                             <span>Девайсы</span>
@@ -1134,10 +1154,12 @@
                                                             Оформить подписку
                                                         </legend>
                                                         <label class="popup__pgf">
-                                                            <input type="text" name="name-user" placeholder="Ваше имя">
+                                                            <input type="text" name="name-user" placeholder="Ваше имя"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
-                                                            <input type="tel" name="phone" placeholder="Номер телефона">
+                                                            <input type="tel" name="phone" placeholder="Номер телефона"
+                                                                required>
                                                         </label>
                                                         <label class="popup__pgf">
                                                             <span>Девайсы</span>
@@ -1279,11 +1301,12 @@
                                 </ul>
                             </div>
                         </div>
-                        <button data-href="popup-xboxones2" class="btn console-specifications__btn popup-link" aria-label="Характеристики консоли открыть модальное окно">
+                        <button data-href="popup-xboxones2" class="btn console-specifications__btn popup-link"
+                            aria-label="Характеристики консоли открыть модальное окно">
                             Характеристики
                         </button>
                         <!-- modal-start -->
-                        <div id="popup-xboxones2" class="popup" role="alert">
+                        <div id="popup-xboxones2" class="popup popup-specifications" role="alert">
                             <div class="popup__body">
                                 <div class="popup__content">
                                     <button type="button" class="popup__close close-popup"
@@ -1385,10 +1408,11 @@
                                                     Оформить подписку
                                                 </legend>
                                                 <label class="popup__pgf">
-                                                    <input type="text" name="name-user" placeholder="Ваше имя">
+                                                    <input type="text" name="name-user" placeholder="Ваше имя" required>
                                                 </label>
                                                 <label class="popup__pgf">
-                                                    <input type="tel" name="phone" placeholder="Номер телефона">
+                                                    <input type="tel" name="phone" placeholder="Номер телефона"
+                                                        required>
                                                 </label>
                                                 <label class="popup__pgf">
                                                     <span>Девайсы</span>
@@ -1495,19 +1519,19 @@
                                     </div>
                                 </div>
                             </li>
-                            <div class="other-projects__column">
-                                <div class="other-projects__item"
-                                    style="background-image: url(images/device/moyvelik/other-projects/other-projects_3.webp);">
-                                    <div tabindex="0" class="other">
-                                        <p class="other-projects__text">
-                                            Мой тренажёр
-                                        </p>
-                                        <a href="moytrenazher.html" class="details other-projects__details">
-                                            Подробнее
-                                        </a>
+                            <li class="other-projects__column">
+                                    <div class="other-projects__item"
+                                        style="background-image: url(images/device/moyvelik/other-projects/other-projects_3.webp);">
+                                        <div tabindex="0" class="other">
+                                            <p class="other-projects__text">
+                                                Мой тренажёр
+                                            </p>
+                                            <a href="moytrenazher.html" class="details other-projects__details">
+                                                Подробнее
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                </li>
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -1521,7 +1545,7 @@
                             </span>
                         </h2>
                         <div class="questions-answers__body">
-                            
+
                             <ul class="questions-answers__list">
                                 <li class="questions-answers__item">
                                     <button data-tab="tab-1" class="questions-answers__link activ">
@@ -1556,14 +1580,21 @@
                             </ul>
                             <div class="questions-answers__container">
 
-                                <div data-tab-content id="tab-1" class="questions-answers__info">
+                                <div data-tab-content id="tab-1" class="questions-info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
                                                 Как работает подписка "Мой самокат"
                                             </button>
                                             <p class="questions-info__text">
-                                                Вы оформляете подписку на сайте, следуя инструкциям. После этого с вами связывается наш менеджер для подтверждения подписки и согласования деталей доставки электросамоката. В течение 48 часов после оформления подписки курьер доставляет вам электросамокат и оформляет необходимые документы. Подписка начинает действовать с момента получения самоката. Вы пользуетесь самокатом, пока он вам не надоест. Если самокат вам больше не нужен - вы можете отменить подписку, и наш курьер заберет у вас самокат.
+                                                Вы оформляете подписку на сайте, следуя инструкциям. После этого с вами
+                                                связывается наш менеджер для подтверждения подписки и согласования
+                                                деталей доставки электросамоката. В течение 48 часов после оформления
+                                                подписки курьер доставляет вам электросамокат и оформляет необходимые
+                                                документы. Подписка начинает действовать с момента получения самоката.
+                                                Вы пользуетесь самокатом, пока он вам не надоест. Если самокат вам
+                                                больше не нужен - вы можете отменить подписку, и наш курьер заберет у
+                                                вас самокат.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1571,7 +1602,9 @@
                                                 Как мне оформить подписку на "Мой самокат"?
                                             </button>
                                             <p class="questions-info__text">
-                                                Вы можете оформить подписку прямо у нас на сайте. Просто <a class="questions-info__text-link">перейдите по ссылке</a> и следуйте дальнейшим инструкциям.
+                                                Вы можете оформить подписку прямо у нас на сайте. Просто <a
+                                                    class="questions-info__text-link">перейдите по ссылке</a> и следуйте
+                                                дальнейшим инструкциям.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1587,7 +1620,8 @@
                                                 Что входит в подписку?
                                             </button>
                                             <p class="questions-info__text">
-                                                Подписка включает в себя электросамокат, зарядное устройство и защитный замок.
+                                                Подписка включает в себя электросамокат, зарядное устройство и защитный
+                                                замок.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1595,7 +1629,13 @@
                                                 Какие документы необходимы для оформления?
                                             </button>
                                             <p class="questions-info__text">
-                                                Чтобы оформить подписку, вам необходимо пройти регистрацию на нашем сайте. Для этого потребуются ваши личные данные, такие как ФИО, номер мобильного телефона, email и карта, которой вы будете оплачивать подписку (сразу или при получении). При непосредственном получении тренажера в акт передачи необходимо будет внести ваши паспортные данные, поэтому при встрече с курьером обязательно иметь при себе паспорт. Курьеру также необходимо будет сфотографировать ваш паспорт.
+                                                Чтобы оформить подписку, вам необходимо пройти регистрацию на нашем
+                                                сайте. Для этого потребуются ваши личные данные, такие как ФИО, номер
+                                                мобильного телефона, email и карта, которой вы будете оплачивать
+                                                подписку (сразу или при получении). При непосредственном получении
+                                                тренажера в акт передачи необходимо будет внести ваши паспортные данные,
+                                                поэтому при встрече с курьером обязательно иметь при себе паспорт.
+                                                Курьеру также необходимо будет сфотографировать ваш паспорт.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1603,7 +1643,9 @@
                                                 Я иностранный гражданин. Могу ли я оформить подписку?
                                             </button>
                                             <p class="questions-info__text">
-                                                Да, вы можете оформить подписку. Для этого потребуется ваш паспорт и документ о регистрации в России, действительный в течение следующих трех месяцев.
+                                                Да, вы можете оформить подписку. Для этого потребуется ваш паспорт и
+                                                документ о регистрации в России, действительный в течение следующих трех
+                                                месяцев.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1619,29 +1661,41 @@
                                                 Мне нет 18 лет, могут ли за меня оформить подписку мои родители?
                                             </button>
                                             <p class="questions-info__text">
-                                                Оформить подписку может лицо старше 18 лет. Всю ответственность за пользование самокатом третьими лицами несет человек, оформивший подписку. Мы настоятельно не рекомендуем использовать самокат лицами, младше 18 лет, так как это транспортное средство повышенной опасности. Мы также настоятельно рекомендуем не передавать ваш самокат любым третьим лицам.
+                                                Оформить подписку может лицо старше 18 лет. Всю ответственность за
+                                                пользование самокатом третьими лицами несет человек, оформивший
+                                                подписку. Мы настоятельно не рекомендуем использовать самокат лицами,
+                                                младше 18 лет, так как это транспортное средство повышенной опасности.
+                                                Мы также настоятельно рекомендуем не передавать ваш самокат любым
+                                                третьим лицам.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
-                                                Как я могу продлить подписку, если захочу пользоваться электросамокатом и дальше?
+                                                Как я могу продлить подписку, если захочу пользоваться электросамокатом
+                                                и дальше?
                                             </button>
                                             <p class="questions-info__text">
-                                                Подписка каждый месяц продлевается автоматически путем списания очередного месячного платежа с карты, на которую вы оформляли подписку. Вы можете отменить подписку в любой день до конца периода, в течение которого действует подписка, самостоятельно в личном кабинете. Подпиской можно пользоваться до окончания оплаченного периода независимо от даты отмены подписки.
+                                                Подписка каждый месяц продлевается автоматически путем списания
+                                                очередного месячного платежа с карты, на которую вы оформляли подписку.
+                                                Вы можете отменить подписку в любой день до конца периода, в течение
+                                                которого действует подписка, самостоятельно в личном кабинете. Подпиской
+                                                можно пользоваться до окончания оплаченного периода независимо от даты
+                                                отмены подписки.
                                             </p>
                                         </li>
                                     </ul>
-                                    
+
                                 </div>
 
-                                <div data-tab-content id="tab-2" class="hidden questions-answers__info">
+                                <div data-tab-content id="tab-2" class="hidden questions-info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
                                                 Я получаю новый электросамокат?
                                             </button>
                                             <p class="questions-info__text">
-                                                Оформив подписку, вы получите новый самокат или самокат, состояние которого максимально близко к новому.
+                                                Оформив подписку, вы получите новый самокат или самокат, состояние
+                                                которого максимально близко к новому.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1649,7 +1703,9 @@
                                                 Какие модели есть в наличии?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы предоставляем в аренду электросамокаты фирмы Yamato. Наша базовая модель – Yamato 0809. О наличии других моделей уточняйте у менеджеров нашего сервиса в чате на сайте, мессенджерах или по телефону.
+                                                Мы предоставляем в аренду электросамокаты фирмы Yamato. Наша базовая
+                                                модель – Yamato 0809. О наличии других моделей уточняйте у менеджеров
+                                                нашего сервиса в чате на сайте, мессенджерах или по телефону.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1657,15 +1713,25 @@
                                                 Как пользоваться самокатом?
                                             </button>
                                             <p class="questions-info__text">
-                                                С правилами пользования электросамокатом вы можете ознакомиться по <a class="questions-info__text-link">ссылке</a>. Рекомендуем ознакомиться с Правилами Дорожного Движения по <a class="questions-info__text-link">ссылке</a>.
+                                                С правилами пользования электросамокатом вы можете ознакомиться по <a
+                                                    class="questions-info__text-link">ссылке</a>. Рекомендуем
+                                                ознакомиться с Правилами Дорожного Движения по <a
+                                                    class="questions-info__text-link">ссылке</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
-                                                Должен ли я оставлять самокат на специально предусмотренных для этого станциях?
+                                                Должен ли я оставлять самокат на специально предусмотренных для этого
+                                                станциях?
                                             </button>
                                             <p class="questions-info__text">
-                                                Нет, в этом нет никакой необходимости. Это ваш самокат, и вы можете оставлять его где угодно, позаботившись о необходимых мерах безопасности и убедившись, что он не мешает движению пешеходов и автомобилистов. Между тем, мы рекомендуем парковать самокат на велостоянках и обязательно использовать замок, который входит в стоимость подписки. В целях безопасности не оставляйте самокат без присмотра на длительное время особенно в ночное время суток.
+                                                Нет, в этом нет никакой необходимости. Это ваш самокат, и вы можете
+                                                оставлять его где угодно, позаботившись о необходимых мерах безопасности
+                                                и убедившись, что он не мешает движению пешеходов и автомобилистов.
+                                                Между тем, мы рекомендуем парковать самокат на велостоянках и
+                                                обязательно использовать замок, который входит в стоимость подписки. В
+                                                целях безопасности не оставляйте самокат без присмотра на длительное
+                                                время особенно в ночное время суток.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1673,20 +1739,27 @@
                                                 Что делать если самокат украли?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы настоятельно просим относиться к электросамокату, как к вашему собственному, и принимать все необходимые меры безопасности. В случае кражи самоката мы взимаем с вас его стоимость, указанную в акте передачи, и рекомендуем вам обратиться в полицию.
+                                                Мы настоятельно просим относиться к электросамокату, как к вашему
+                                                собственному, и принимать все необходимые меры безопасности. В случае
+                                                кражи самоката мы взимаем с вас его стоимость, указанную в акте
+                                                передачи, и рекомендуем вам обратиться в полицию.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
-    
-                                <div data-tab-content id="tab-3" class="hidden questions-answers__info">
+
+                                <div data-tab-content id="tab-3" class="hidden questions-info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
                                                 Сколько стоит доставка самоката?
                                             </button>
                                             <p class="questions-info__text">
-                                                В пределах МКАД и до 30 км от МКАД - бесплатно. Стоимость доставки от 30 до 40 км от МКАД составляет 400 рублей. Выезд курьера для возврата и замены электросамоката в пределах МКАД и до 30 км от МКАД входит в стоимость подписки. Выезд курьера от 30 км до 40 км от МКАД для возврата и замены электросамоката составляет 400 рублей.
+                                                В пределах МКАД и до 30 км от МКАД - бесплатно. Стоимость доставки от 30
+                                                до 40 км от МКАД составляет 400 рублей. Выезд курьера для возврата и
+                                                замены электросамоката в пределах МКАД и до 30 км от МКАД входит в
+                                                стоимость подписки. Выезд курьера от 30 км до 40 км от МКАД для возврата
+                                                и замены электросамоката составляет 400 рублей.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1694,7 +1767,9 @@
                                                 Могу ли я забрать и вернуть самокат сам?
                                             </button>
                                             <p class="questions-info__text">
-                                                Да, вы можете забрать и вернуть самокат самостоятельно в наш офис по адресу 1-й Кожевнический пер., д.6, стр. 6, заранее согласовав время с оператором.
+                                                Да, вы можете забрать и вернуть самокат самостоятельно в наш офис по
+                                                адресу 1-й Кожевнический пер., д.6, стр. 6, заранее согласовав время с
+                                                оператором.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1715,15 +1790,19 @@
                                         </li>
                                     </ul>
                                 </div>
-    
-                                <div data-tab-content id="tab-4" class="hidden questions-answers__info">
+
+                                <div data-tab-content id="tab-4" class="hidden questions-info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
                                                 У меня закончилась подписка, как быстро я должен вернуть самокат?
                                             </button>
                                             <p class="questions-info__text">
-                                                По истечении подписки вы должны вернуть самокат в течение 48 часов. Для этого мы связываемся с вами, чтобы согласовать время и место забора самоката. По прошествии 48 часов, если Вы не возвращаете самокат, начинают начисляться пени в размере 500 руб. в сутки за каждый день просрочки возврата самоката
+                                                По истечении подписки вы должны вернуть самокат в течение 48 часов. Для
+                                                этого мы связываемся с вами, чтобы согласовать время и место забора
+                                                самоката. По прошествии 48 часов, если Вы не возвращаете самокат,
+                                                начинают начисляться пени в размере 500 руб. в сутки за каждый день
+                                                просрочки возврата самоката
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1731,7 +1810,8 @@
                                                 Могу ли я вернуть самокат раньше, до окончания подписки?
                                             </button>
                                             <p class="questions-info__text">
-                                                Вы можете вернуть самокат в любой день до окончания подписки. Однако сумма за неиспользованные дни оплаченной подписки не возвращается.
+                                                Вы можете вернуть самокат в любой день до окончания подписки. Однако
+                                                сумма за неиспользованные дни оплаченной подписки не возвращается.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1739,7 +1819,10 @@
                                                 Как я могу отменить подписку?
                                             </button>
                                             <p class="questions-info__text">
-                                                Отменить подписку можно самостоятельно в личном кабинете. Вы можете отменить подписку в любой день до ее окончания. При этом самокатом можно пользоваться до окончания оплаченного периода независимо от даты отмены подписки.
+                                                Отменить подписку можно самостоятельно в личном кабинете. Вы можете
+                                                отменить подписку в любой день до ее окончания. При этом самокатом можно
+                                                пользоваться до окончания оплаченного периода независимо от даты отмены
+                                                подписки.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1747,20 +1830,26 @@
                                                 Как проходит процедура возврата самоката?
                                             </button>
                                             <p class="questions-info__text">
-                                                По прекращении срока подписки с вами свяжется наш оператор для согласования места и времени забора самоката. После этого к вам приедет наш курьер, который оценит состояние самоката, сделает его фотографии или видео и занесет необходимую информацию о самокате в акт приема. Вы также можете вернуть самокат самостоятельно в наш офис.
+                                                По прекращении срока подписки с вами свяжется наш оператор для
+                                                согласования места и времени забора самоката. После этого к вам приедет
+                                                наш курьер, который оценит состояние самоката, сделает его фотографии
+                                                или видео и занесет необходимую информацию о самокате в акт приема. Вы
+                                                также можете вернуть самокат самостоятельно в наш офис.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
-    
-                                <div data-tab-content id="tab-5" class="hidden questions-answers__info">
+
+                                <div data-tab-content id="tab-5" class="hidden questions-info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
                                                 У меня сломался самокат, что делать?
                                             </button>
                                             <p class="questions-info__text">
-                                                В случае поломки самоката немедленно прекратите его использование и свяжитесь с нами для согласования времени и места замены самоката на новый.
+                                                В случае поломки самоката немедленно прекратите его использование и
+                                                свяжитесь с нами для согласования времени и места замены самоката на
+                                                новый.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1768,36 +1857,62 @@
                                                 Взимаются ли с меня штрафы в случае поломки самоката?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы берем на себя полностью заботы по обслуживанию и ремонту поломок самоката, связанных с заводским браком или произошедших при правильном и аккуратном его использовании. Просто напишите в нашу службу поддержки, и курьер оперативно доставит вам новый самокат взамен старого. Поломки в результате неправильного и неаккуратного использования электросамоката оплачиваются пропорционально нанесенному ущербу за счет пользователя. К таким поломкам не относится нормальный износ самоката. Более подробно с размерами штрафов можно ознакомиться в <a class="questions-info__text-link">офферте</a>. Инструкция по использованию электросамоката будет доступна в личном кабинете после оформления подписки. Вы также получите краткую инструкцию вместе с самокатом, чтобы как можно быстрее начать его использование.
+                                                Мы берем на себя полностью заботы по обслуживанию и ремонту поломок
+                                                самоката, связанных с заводским браком или произошедших при правильном и
+                                                аккуратном его использовании. Просто напишите в нашу службу поддержки, и
+                                                курьер оперативно доставит вам новый самокат взамен старого. Поломки в
+                                                результате неправильного и неаккуратного использования электросамоката
+                                                оплачиваются пропорционально нанесенному ущербу за счет пользователя. К
+                                                таким поломкам не относится нормальный износ самоката. Более подробно с
+                                                размерами штрафов можно ознакомиться в <a
+                                                    class="questions-info__text-link">офферте</a>. Инструкция по
+                                                использованию электросамоката будет доступна в личном кабинете после
+                                                оформления подписки. Вы также получите краткую инструкцию вместе с
+                                                самокатом, чтобы как можно быстрее начать его использование.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
-                                                Предоставляете ли Вы страховку от поломок, кражи самоката или нанесения ущерба самокату третьим лицам?
+                                                Предоставляете ли Вы страховку от поломок, кражи самоката или нанесения
+                                                ущерба самокату третьим лицам?
                                             </button>
                                             <p class="questions-info__text">
-                                                Для самоката и велосипеда доступно оформление подписки с тарифом «Защита». Данный тариф покрывает твою материальную ответственность при повреждениях и поломках, полученных в ходе использования девайса и сокращает размер твоей материальной ответственности при краже девайса третьими лицами. Более подробно с этим вопросом можно ознакомится в оферте.
+                                                Для самоката и велосипеда доступно оформление подписки с тарифом
+                                                «Защита». Данный тариф покрывает твою материальную ответственность при
+                                                повреждениях и поломках, полученных в ходе использования девайса и
+                                                сокращает размер твоей материальной ответственности при краже девайса
+                                                третьими лицами. Более подробно с этим вопросом можно ознакомится в
+                                                оферте.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
-                                                Если самокат вышел из строя, как устанавливается, есть ли в этом вина пользователя?
+                                                Если самокат вышел из строя, как устанавливается, есть ли в этом вина
+                                                пользователя?
                                             </button>
                                             <p class="questions-info__text">
-                                                Для определения причин возникновения видимых повреждений и выявления скрытых повреждений производится техническая экспертиза самоката. Более подробно с этим вопросом можно ознакомится в <a class="questions-info__text-link">офферте</a>, представленной на сайте.
+                                                Для определения причин возникновения видимых повреждений и выявления
+                                                скрытых повреждений производится техническая экспертиза самоката. Более
+                                                подробно с этим вопросом можно ознакомится в <a
+                                                    class="questions-info__text-link">офферте</a>, представленной на
+                                                сайте.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
-    
-                                <div data-tab-content id="tab-6" class="hidden questions-answers__info">
+
+                                <div data-tab-content id="tab-6" class="hidden questions-info">
                                     <ul class="questions-info__list">
                                         <li class="questions-info__item">
                                             <button class="questions-info__heading" data-name="accordeon-title">
                                                 В каких городах работает ваш сервис?
                                             </button>
                                             <p class="questions-info__text">
-                                                Мы предоставляем свои услуги только на территории Москвы, Казани, Санкт-Петербурга и Краснодара. Однако, если вы хотите, чтобы наш сервис появился в вашем городе, дайте нам знать, написав на электронную почту <a class="questions-info__text-link">info@moysamokat.ru</a>, указав тему письма «Хочу «Мой самокат» в городе N».
+                                                Мы предоставляем свои услуги только на территории Москвы, Казани,
+                                                Санкт-Петербурга и Краснодара. Однако, если вы хотите, чтобы наш сервис
+                                                появился в вашем городе, дайте нам знать, написав на электронную почту
+                                                <a class="questions-info__text-link">info@moysamokat.ru</a>, указав тему
+                                                письма «Хочу «Мой самокат» в городе N».
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1805,7 +1920,9 @@
                                                 Как происходит оплата?
                                             </button>
                                             <p class="questions-info__text">
-                                                Оплатить подписку можно сразу или при получении самоката по карте из личного кабинета. Ссылка на оплату будет доступна после прохождения регистрации на сайте.
+                                                Оплатить подписку можно сразу или при получении самоката по карте из
+                                                личного кабинета. Ссылка на оплату будет доступна после прохождения
+                                                регистрации на сайте.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1813,7 +1930,8 @@
                                                 Правила оплаты и безопасности, конфиденциальность сервиса "Мой самокат"?
                                             </button>
                                             <p class="questions-info__text">
-                                                Со всей подробной информацией вы можете ознакомиться <a class="questions-info__text-link">здесь</a>.
+                                                Со всей подробной информацией вы можете ознакомиться <a
+                                                    class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1821,7 +1939,8 @@
                                                 Я курьер. Могу ли я воспользоваться вашей подпиской?
                                             </button>
                                             <p class="questions-info__text">
-                                                Для курьеров у нас действует специальная программа. Ознакомиться со всеми условиями можно <a class="questions-info__text-link">здесь</a>.
+                                                Для курьеров у нас действует специальная программа. Ознакомиться со
+                                                всеми условиями можно <a class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                         <li class="questions-info__item">
@@ -1829,7 +1948,8 @@
                                                 Я юридическое лицо. Могу ли я воспользоваться вашей подпиской?
                                             </button>
                                             <p class="questions-info__text">
-                                                Для бизнеса у нас действует специальная программа. Ознакомиться со всеми условиями можно <a class="questions-info__text-link">здесь</a>.
+                                                Для бизнеса у нас действует специальная программа. Ознакомиться со всеми
+                                                условиями можно <a class="questions-info__text-link">здесь</a>.
                                             </p>
                                         </li>
                                     </ul>
@@ -1982,6 +2102,7 @@
     <script src="js/burger.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/tabs.js"></script>
-    
+
 </body>
+
 </html>
