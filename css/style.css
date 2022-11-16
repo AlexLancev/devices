@@ -123,7 +123,7 @@ button {
     font-family: inherit;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 15px;
     font-size: 12px;
     line-height: 1.4;
     font-weight: 700;
@@ -167,8 +167,8 @@ button {
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+    width: 107px;
+    height: 44px;
     object-fit: contain;
 }
 
@@ -200,16 +200,22 @@ button {
     position: relative;
     z-index: 3;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     min-height: 66px;
+    padding: 5px 0;
 }
 
-.header__content {
-    width: 100%;
-    min-height: 650px;
-    height: 100vh;
-    padding-bottom: 20px;
+.header__body>* {
+    margin-right: 15px;
+}
+
+.header__body>:last-child {
+    margin-right: 0;
+}
+
+.header-content {
     background-color: #2b2b2b;
     background-size: cover;
     background-position: 70% 50%;
@@ -217,7 +223,16 @@ button {
     margin-bottom: 70px;
 }
 
-.header__content .header__burger {
+.header-content-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 70px 0;
+}
+
+.header-content .burger {
     display: none;
 }
 
@@ -228,7 +243,7 @@ button {
     border-radius: 40px;
 }
 
-.nav__list-device .header__btn {
+.nav__list-device .header-btn {
     margin: auto;
 }
 
@@ -239,14 +254,15 @@ button {
     max-width: 620px;
 }
 
-.nav__item {
+.nav-item {
     text-align: center;
-    margin: 0 15px;
+    padding: 5px 15px;
     text-transform: lowercase;
 }
 
 .item-cabinet {
     padding: 5px 10px;
+    margin: 0;
     background-color: #fff;
     border-radius: 20px;
     cursor: pointer;
@@ -266,27 +282,27 @@ button {
     color: inherit;
 }
 
-.header__info {
+.header-info {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.header__info-box {
+.header-info-box {
     width: 100%;
     max-width: 730px;
 }
 
-.header__title {
+.header-title {
     max-width: 670px;
 }
 
-.header__span-rent {
+.header-span-rent {
     font-size: 50px;
     color: #FDEE21;
 }
 
-.header__subtitle {
+.header-subtitle {
     font-size: 18px;
     color: #ffffff;
 }
@@ -295,7 +311,7 @@ button {
     display: none;
 }
 
-.header__btn {
+.header-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,7 +324,7 @@ button {
 
 /* burger-start */
 
-.header__burger {
+.burger {
     position: fixed;
     z-index: 3;
     top: 15px;
@@ -322,7 +338,7 @@ button {
     visibility: visible;
 }
 
-.header__burger span {
+.burger span {
     display: inline-block;
     width: 25px;
     height: 2px;
@@ -335,8 +351,8 @@ button {
     transition: 0.3s;
 }
 
-.header__burger::before,
-.header__burger:after {
+.burger::before,
+.burger:after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -348,54 +364,54 @@ button {
     transition: 0.3s;
 }
 
-.header__burger::before {
+.burger::before {
     top: 30%;
 }
 
-.header__burger::after {
+.burger::after {
     bottom: 30%;
 }
 
-.header__burger.active:before {
+.burger.active:before {
     top: 19px;
     left: 8px;
     transform: rotate(45deg);
     background-color: #707070;
 }
 
-.header__burger.active:hover:before {
+.burger.active:hover:before {
     transform: rotate(-45deg);
     background-color: #ff4141;
 }
 
-.header__burger.active:after {
+.burger.active:after {
     bottom: 19px;
     left: 8px;
     transform: rotate(-45deg);
     background-color: #707070;
 }
 
-.header__burger.active:hover:after {
+.burger.active:hover:after {
     transform: rotate(45deg);
     background-color: #ff4141;
 }
 
-.header__burger.active span {
+.burger.active span {
     transform: scale(0);
 }
 
 /* burger-stop */
 
 /* menu-start */
-.nav__list-device .nav__item {
+.nav__list-device .nav-item {
     margin-bottom: 20px;
 }
 
-.nav__list-device .nav__link {
+.nav__list-device .nav-link {
     font-size: 22px;
 }
 
-.header-device .header__btn {
+.header-device .header-btn {
     margin: auto;
 }
 
@@ -408,7 +424,7 @@ button {
     border-radius: 90px;
 }
 
-.header__btn-device {
+.header-btn-device {
     width: 100%;
     max-width: 200px;
     padding: 15px;
@@ -459,7 +475,6 @@ button {
     align-items: center;
     justify-content: center;
     flex: 0 1 520px;
-    max-height: 220px;
     padding: 43px 20px;
     font-size: 18px;
 }
@@ -504,18 +519,18 @@ button {
     font-size: 32px;
 }
 
-.item-block__bottom {
+.item-block-bottom {
     position: relative;
 }
 
-.item-block__bottom:before,
-.item-block__bottom:after {
+.item-block-bottom:before,
+.item-block-bottom:after {
     content: '';
     display: inline-block;
     position: absolute;
 }
 
-.item-block__bottom:before {
+.item-block-bottom:before {
     bottom: -20px;
     right: -35px;
     width: 121px;
@@ -523,7 +538,7 @@ button {
     background-image: url(../images/images-svg/item-3.svg);
 }
 
-.item-block__bottom:after {
+.item-block-bottom:after {
     bottom: -190px;
     right: 70px;
     width: 317px;
@@ -531,7 +546,7 @@ button {
     background-image: url(../images/images-svg/item-2.svg);
 }
 
-.subscription-works__wrapper {
+.subscription-works-wrapper {
     margin-bottom: 100px;
 }
 
@@ -628,7 +643,7 @@ button {
     width: 280px;
 }
 
-.subscription__box-heading {
+.benefits-row__box-heading {
     margin-bottom: 10px;
 }
 
@@ -639,7 +654,7 @@ button {
     align-items: center;
     max-width: 1200px;
     min-height: 170px;
-    padding: 10px 50px;
+    padding: 20px 50px;
     border-radius: 90px;
     margin: auto;
 }
@@ -687,11 +702,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 290px;
-    height: 70px;
 }
 
-.benefits__text {
+.benefits-row__text {
     color: #525252;
 }
 
@@ -753,19 +769,12 @@ button {
 
 .choose-model__box-images {
     display: flex;
-    align-items: flex-end;
-    width: 100%;
-    max-width: 200px;
-    max-height: 180px;
+    align-items: flex-start;
     margin-right: 5px;
     position: relative;
 }
 
-.bike__box-images {
-    width: 100%;
-    max-width: 300px;
-    max-height: 210px;
-}
+
 
 .choose-model__box-images:before {
     content: '';
@@ -778,8 +787,9 @@ button {
 }
 
 .choose-model__box-images img {
-    width: 100%;
-    max-height: 180px;
+    width: 200px;
+    height: 180px;
+    object-fit: contain;
 }
 
 .bike__box-images img {
@@ -797,6 +807,10 @@ button {
 
 .choose-model__list-item {
     margin-bottom: 5px;
+}
+
+.choose-model__list-item:last-child {
+    margin-bottom: 0;
 }
 
 .choose-model__list-item span:nth-child(2) {
@@ -867,7 +881,8 @@ button {
 }
 
 .bike__product img {
-    width: 100%;
+    width: 250px;
+    height: 210px;
 }
 
 .bike__analog {
@@ -1052,7 +1067,7 @@ span.subscription-cooler__price {
 .feedback__body {
     display: grid;
     justify-items: stretch;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 20px;
 }
 
@@ -1062,7 +1077,7 @@ span.subscription-cooler__price {
 
 .feedback__inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 20px;
 }
@@ -1081,9 +1096,14 @@ span.subscription-cooler__price {
     height: 50px;
 }
 
-.feedback__images img,
+.feedback__images img {
+    width: 82px;
+    height: 24px;
+}
+
 .feedback__grade img {
-    width: 100%;
+    width: 105px;
+    height: 50px;
 }
 
 .feedback__text p>* {
@@ -1139,7 +1159,6 @@ span.subscription-cooler__price {
     align-items: center;
     margin: auto;
     max-width: 240px;
-    min-height: 60px;
 }
 
 .about-device__dedicated {
@@ -1277,7 +1296,7 @@ span.subscription-cooler__price {
 .delivery-subscription__body {
     display: grid;
     justify-items: stretch;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 20px;
 }
 
@@ -1294,14 +1313,12 @@ span.subscription-cooler__price {
 }
 
 .delivery-subscription__images {
-    width: 97px;
-    height: 68px;
     margin-right: 20px;
 }
 
 .delivery-subscription__images img {
-    width: 100%;
-    height: 100%;
+    width: 97px;
+    height: 68px;
     object-fit: contain;
 }
 
@@ -1317,6 +1334,7 @@ span.subscription-cooler__price {
 
 .delivery-subscription__payments {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -1374,14 +1392,17 @@ span.subscription-cooler__price {
 .questions-answers__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-end;
     border-bottom: 1px solid #cacaca;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .questions-answers__item {
+    width: 100%;
+    max-width: 195px;
     padding: 20px;
-    margin: 0 15px;
+    text-align: center;
 }
 
 .questions-answers__link {
@@ -1407,11 +1428,14 @@ span.subscription-cooler__price {
     max-height: 0;
     overflow: hidden;
     transition: 0.3s;
+    color: #777777;
 }
 
 
 .questions-info__item {
     border-top: 1px solid #e7e7e7;
+    padding: 5px;
+    padding-bottom: 10px;
 }
 
 .questions-info__item:last-child {
@@ -1422,10 +1446,10 @@ span.subscription-cooler__price {
     display: block;
     width: 100%;
     text-align: left;
-    padding: 20px 5px;
+    padding: 20px 0px;
     font-size: 21px;
     padding-right: 33px;
-    color: #777777;
+    color: #000000;
     background-color: transparent;
     cursor: pointer;
     position: relative;
@@ -1629,8 +1653,6 @@ span.subscription-cooler__price {
 
 
 
-
-
 /* Личный кабинет старт*/
 
 .cabinets {
@@ -1641,13 +1663,12 @@ span.subscription-cooler__price {
 }
 
 .cabinets__body {
-    min-height: 500px;
-    height: 100vh;
+    min-height: 100vh;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 50px 20px;
 }
 
 .cabinets__form {
@@ -1718,25 +1739,26 @@ span.subscription-cooler__price {
 /* курьры старт */
 
 
-.header__info-box>* {
+.header-info-box>* {
     margin-bottom: 20px;
 }
 
-.header__info-box>*:last-child {
+.header-info-box>*:last-child {
     margin-bottom: 0px;
 }
 
 .btn-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 500px;
 }
 
-.header__info-box .btn-row {
+.header-info-box .btn-row {
     max-width: 425px;
 }
 
-.header__info-box .header__btn {
+.header-info-box .header-btn {
     max-width: 200px;
     padding: 16px;
 }
@@ -1753,6 +1775,7 @@ span.subscription-cooler__price {
 
 .benefits-couriers__column {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 30px;
@@ -1800,8 +1823,8 @@ span.subscription-cooler__price {
 }
 
 .benefits-partners__images img {
-    width: 100%;
-    height: 100%;
+    width: 110px;
+    height: 30px;
     object-fit: contain;
 }
 
@@ -1879,25 +1902,27 @@ span.subscription-cooler__price {
 
 .how-works__body {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
 }
 
 .how-works__column {
-    max-width: 280px;
-    padding: 0 10px;
+    max-width: 275px;
+    padding: 15px 10px;
     margin: 0 10px;
 }
 
 .how-works__item {
     text-align: center;
     height: 100%;
+    padding: 7px;
 }
 
 .how-works__images {
     display: flex;
     align-items: flex-end;
-    max-width: 90px;
+    width: 90px;
     height: 97px;
     margin: auto;
     margin-bottom: 20px;
@@ -1937,9 +1962,14 @@ span.subscription-cooler__price {
     grid-gap: 20px;
 }
 
+.why-rent__column {
+    padding: 15px 10px;
+}
+
 .why-rent__item {
     height: 100%;
     text-align: center;
+    padding: 7px;
 }
 
 .why-rent__item>* {
@@ -2001,6 +2031,7 @@ span.subscription-cooler__price {
 
 .couriers-model__body {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
     margin-bottom: 50px;
@@ -2012,7 +2043,7 @@ span.subscription-cooler__price {
 
 .couriers-model__column {
     width: 100%;
-    max-width: 400px;
+    max-width: 390px;
     padding: 0 10px;
     margin-bottom: 30px;
 }
@@ -2217,8 +2248,6 @@ span.subscription-cooler__price {
 
 .header-device {
     position: relative;
-    min-height: 497px;
-    height: 100vh;
     background-color: #535353;
     background-size: cover;
     background-position: center;
@@ -2226,7 +2255,7 @@ span.subscription-cooler__price {
     margin-bottom: 100px;
 }
 
-.header-device .header__info-box span {
+.header-device .header-info-box span {
     color: #ffee00;
     font-weight: 700;
 }
@@ -2363,34 +2392,34 @@ span.subscription-cooler__price {
 
 
 
-.choose-bike__images {
+.choose-bike-images {
     max-width: 271px;
     height: 185px;
 }
 
-.choose-bike__images img {
+.choose-bike-images img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.choose-training__images {
+.choose-training-images {
     max-width: 344px;
     height: 230px;
 }
 
-.choose-training__images img {
+.choose-training-images img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.choose-console__images {
+.choose-console-images {
     max-width: 400px;
     height: 193px;
 }
 
-.choose-console__images img {
+.choose-console-images img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -2438,7 +2467,7 @@ span.subscription-cooler__price {
     color: #ff4141;
 }
 
-.device-choose__btn {
+.device-choose-btn {
     display: block;
     width: 100%;
     max-width: 200px;
@@ -2453,7 +2482,6 @@ span.subscription-cooler__price {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 700px;
-    height: 100vh;
     padding: 70px 0;
     padding-left: 50px;
     color: #ffffff;
@@ -2501,6 +2529,7 @@ span.subscription-cooler__price {
 
 .transport-work__body {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
 }
@@ -2583,7 +2612,8 @@ span.subscription-cooler__price {
 
 .about-media__body {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -2602,27 +2632,15 @@ span.subscription-cooler__price {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
     height: 90px;
     margin: 0 30px;
-    position: relative;
 }
 
 .about-media__images img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-.about-media__images::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -30px;
-    width: 1px;
-    border-radius: 50%;
-    height: 180px;
-    background-color: rgba(116, 116, 116, 0.198);
 }
 
 .other-projects {
@@ -2642,7 +2660,7 @@ span.subscription-cooler__price {
 }
 
 .other-projects__column {
-    height: 350px;
+    min-height: 350px;
 }
 
 .other-projects__item {
@@ -2677,7 +2695,7 @@ span.subscription-cooler__price {
 
 .other-projects__text,
 .other-projects__details {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -2803,7 +2821,7 @@ span.subscription-cooler__price {
     font-size: 20px;
 }
 
-.choose-price__span {
+.choose-price-span {
     color: #686868;
     font-size: 27px;
     margin-left: 5px;
@@ -2838,7 +2856,6 @@ span.subscription-cooler__price {
     align-items: center;
     width: 100%;
     max-width: 591px;
-    height: 505px;
     margin: 0 20px;
 }
 
@@ -2893,6 +2910,7 @@ span.subscription-cooler__price {
 
 .console-specifications__body {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
@@ -3021,15 +3039,15 @@ span.subscription-cooler__price {
     padding: 20px;
 }
 
-.nav__link-subscription,
-.nav__link-reviews,
-.nav__link-personal,
-.nav__link-answers,
-.nav__link-devices,
-.nav__link-scooters,
-.nav__link-bike,
-.nav__link-phone,
-.nav__link-benefits,
+.nav-link-subscription,
+.nav-link-reviews,
+.nav-link-personal,
+.nav-link-answers,
+.nav-link-devices,
+.nav-link-scooters,
+.nav-link-bike,
+.nav-link-phone,
+.nav-link-benefits,
 .couriers-details {
     padding-top: 80px;
     margin-top: -80px;
@@ -3397,11 +3415,11 @@ body.lock {
 
 @media (max-width: 1260px) {
 
-    .item-block__bottom:before {
+    .item-block-bottom:before {
         right: 0;
     }
 
-    .item-block__bottom:after {
+    .item-block-bottom:after {
         right: 100px;
     }
 }
@@ -3550,7 +3568,7 @@ body.lock {
 
 @media (max-width: 970px) {
 
-    .header__content .header__burger {
+    .header-content .burger {
         display: block;
     }
 
@@ -3566,15 +3584,15 @@ body.lock {
         font-size: 18px;
     }
 
-    .nav__link-subscription,
-    .nav__link-reviews,
-    .nav__link-personal,
-    .nav__link-answers,
-    .nav__link-devices,
-    .nav__link-scooters,
-    .nav__link-bike,
-    .nav__link-phone,
-    .nav__link-benefits,
+    .nav-link-subscription,
+    .nav-link-reviews,
+    .nav-link-personal,
+    .nav-link-answers,
+    .nav-link-devices,
+    .nav-link-scooters,
+    .nav-link-bike,
+    .nav-link-phone,
+    .nav-link-benefits,
     .couriers-details {
         padding-top: 10px;
         margin-top: -10px;
@@ -3637,7 +3655,6 @@ body.lock {
 
     .benefits-row__btn {
         width: 200px;
-        height: 50px;
     }
 
     .benefits-couriers__title {
@@ -3685,26 +3702,26 @@ body.lock {
 
 @media (max-width: 767px) {
 
-    .header__info-box {
+    .header-info-box {
         max-width: 100%;
         text-align: center;
     }
 
-    .item-block__bottom:before {
+    .item-block-bottom:before {
         bottom: -55px;
     }
 
-    .item-block__bottom:after {
+    .item-block-bottom:after {
         bottom: -230px;
     }
 
-    .header__title {
+    .header-title {
         text-align: center;
         font-size: calc(24px + (33 - 9) * ((100vw - 320px) / (1200 - 320)));
         margin: auto;
     }
 
-    .header__btn {
+    .header-btn {
         margin: auto;
     }
 
@@ -3712,16 +3729,16 @@ body.lock {
         margin: auto;
     }
 
-    .header__info .btn {
+    .header-info .btn {
         margin: auto;
         margin-bottom: 15px;
     }
 
-    .header__btn {
+    .header-btn {
         margin: 0 10px;
     }
 
-    .header__btn {
+    .header-btn {
         min-height: 45px;
     }
 
@@ -4005,7 +4022,7 @@ body.lock {
 
     .questions-answers,
     .other-devices,
-    .subscription-works__wrapper,
+    .subscription-works-wrapper,
     .about-device,
     .partners,
     .there-pickup,
@@ -4373,21 +4390,16 @@ body.lock {
 
 @media (max-width: 450px) {
 
-    .header__content {
-        min-height: 100%;
-        height: 500px;
-    }
-
-    .header__subtitle {
+    .header-subtitle {
         font-size: 18px;
     }
 
-    .header__btn {
+    .header-btn {
         padding: 15px;
         max-width: 200px;
     }
 
-    .item-block__bottom:after {
+    .item-block-bottom:after {
         content: none;
     }
 
@@ -4451,7 +4463,7 @@ body.lock {
     .there-pickup,
     .questions-answers,
     .other-devices,
-    .subscription-works__wrapper,
+    .subscription-works-wrapper,
     .about-device,
     .partners,
     .why-buy,
@@ -4468,7 +4480,7 @@ body.lock {
     .console-specifications,
     .tv-games,
     .benefits-couriers__row,
-    .header__content,
+    .header-content,
     .rent-day,
     .why-rent,
     .couriers-model,
@@ -4477,7 +4489,7 @@ body.lock {
         margin-bottom: 50px;
     }
 
-    .header__info-box .btn {
+    .header-info-box .btn {
         max-width: 200px;
         padding: 15px;
     }
@@ -4582,13 +4594,13 @@ body.lock {
         padding: 10px;
     }
 
-    .header__btn {
+    .header-btn {
         padding: 10px;
         max-width: 180px;
         min-height: 45px;
     }
 
-    .nav__list-device .nav__link {
+    .nav__list-device .nav-link {
         font-size: 20px;
     }
 
@@ -4597,7 +4609,7 @@ body.lock {
         justify-content: center;
     }
 
-    .header__info-box .btn {
+    .header-info-box .btn {
         margin: auto;
         margin-bottom: 15px;
     }
@@ -5029,8 +5041,12 @@ body.lock {
     position: relative;
 }
 
-.privacy-nav__item:before,
-.privacy-nav__item:after {
+.privacy-nav__item a {
+    color: #000000;
+}
+
+.privacy-nav-item:before,
+.privacy-nav-item:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -5041,36 +5057,36 @@ body.lock {
     background-color: #000;
 }
 
-.privacy-nav__item:before {
+.privacy-nav-item:before {
     transform: rotate(45deg);
     transform-origin: right;
 }
 
-.privacy-nav__item:after {
+.privacy-nav-item:after {
     transform: rotate(-45deg);
     transform-origin: right;
 }
 
-.privacy-nav__item:last-child:before,
-.privacy-nav__item:last-child:after {
+.privacy-nav-item:last-child:before,
+.privacy-nav-item:last-child:after {
     content: none;
 }
 
-.privacy-nav__item:last-child {
+.privacy-nav-item:last-child {
     margin-right: 0;
 }
 
-.privacy-nav__item a {
+.privacy-nav-item a {
     font-size: 20px;
     color: #000000;
 }
 
-.privacy-nav__link {
+.privacy-nav-link {
     transition: 0.3s;
     color: #000000;
 }
 
-.privacy-nav__link:hover {
+.privacy-nav-link:hover {
     color: #ff0000;
 }
 
@@ -5202,7 +5218,7 @@ body.lock {
         margin-bottom: 30px;
     }
 
-    .privacy-nav__item a {
+    .privacy-nav-item a {
         font-size: 13px;
     }
 
