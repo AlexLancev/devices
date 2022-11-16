@@ -1,19 +1,25 @@
-const tabHeaders = document.querySelectorAll('[data-tab]');
-const contentBoxes = document.querySelectorAll('[data-tab-content]');
+const tabs = () => {
 
-tabHeaders.forEach(function (item) {
-    item.addEventListener('click', function () {
+    const tabHeaders = document.querySelectorAll('[data-tab]');
+    const contentBoxes = document.querySelectorAll('[data-tab-content]');
 
-        const noActiv = document.querySelector('.activ');
-        noActiv.classList.remove('activ');
-        this.classList.add('activ');
+    tabHeaders.forEach(function (item) {
+        item.addEventListener('click', function () {
 
-        contentBoxes.forEach(function (item) {
-            item.classList.add('hidden');
-        });
+            const noActiv = document.querySelector('.activ');
+            noActiv.classList.remove('activ');
+            this.classList.add('activ');
 
-        const contentBox = document.querySelector('#' + this.dataset.tab);
-        contentBox.classList.remove('hidden');
+            contentBoxes.forEach(function (item) {
+                item.classList.add('hidden');
+            });
 
+            const contentBox = document.querySelector('#' + this.dataset.tab);
+            contentBox.classList.remove('hidden');
+
+        })
     })
-})
+
+}
+
+tabs();
